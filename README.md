@@ -13,7 +13,7 @@ User guide for the Grapho data science + storytelling toolkit
 - [Grapho VM](#grapho-vm)
 - [Online Services](#online-services)
   - [Dashboard](#dashboard)
-  - [API](#graphoapi)
+  - [API](#api)
   - [Integrations](#integrations)
   - [Importers](#importer)
 - [Troubleshooting](#troubleshooting)
@@ -247,19 +247,20 @@ Return to [Table of Contents](#table-of-contents).
 
 # Grapho VM
 
-Grapho VMs (aka "Grapho Virtual Machines") are Linux virtual machine containers that package Grapho online services to be used on-premise or on cloud platforms.
+Grapho VMs (aka "Grapho Virtual Machines") are Linux virtual machine containers that package Grapho online services to be used on your local device, on-premises hosting or on cloud platforms.
 
-We use [packer](https://www.packer.io/) and [terragrunt](https://terragrunt.gruntwork.io/) to keep on-premise and cloud-hosted virtual machine variants in sync.
+We use [packer](https://www.packer.io/) and [terragrunt](https://terragrunt.gruntwork.io/) to keep on-premises and cloud-hosted virtual machine variants in sync.
 
 Supported virtual machine platforms
 
+* Linux Containers (LXC)
 * Windows WSL2
-* LXC
+* Docker
 * AWS AMI
 * Virtual Box
 * VMWare
 
-Our standard Linux operating system is Debian. Contact us for other format requests.
+The default Grapho VM is a Debian LXC Container based roughly on the [VFX Reference Platform](https://vfxplatform.com/).
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -267,7 +268,7 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Dashboard
 
-Graph data front-ends custom built for specific use cases from popular frameworks.
+Graph data front-ends custom built for specific use cases from popular frameworks. 
 
 Integrations
 
@@ -275,7 +276,7 @@ Integrations
 * Streamlit
 * Wagtail
 
-Contact us for requests.
+Contact us for any new integration requests.
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -291,7 +292,7 @@ Features
 * Mux database queries (e.g. CYPHER, SQL) with local config
 * Support for running on local desktop, on-premise hosting and cloud platforms
 
-Open source release COMING SOON
+Public release COMING SOON
 
 ### demo.grapho.app
 
@@ -335,6 +336,13 @@ Platforms
 * Twitter
 * Facebook
 * Discord
+
+Graphics Engines
+
+* Unreal Engine
+* Houdini
+* Touch Designer
+* Blender
 
 Return to [Table of Contents](#table-of-contents).
 
