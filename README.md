@@ -149,6 +149,12 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Interactivity
 
+### Controls
+
+Meta Quest Touch Controller layout
+
+![controls](img/grapho-controls-quest.png)
+
 ### Teleport
 
 ![teleport](img/grapho-teleport.png)
@@ -249,7 +255,7 @@ Not yet implemented. Sorry about that!
 
 ![settings](img/grapho-settings.png)
 
-Press SETTINGS button or FACE BUTTON #2 to toggle a menu
+Press SETTINGS button on Left Controller
 
 NOTE - Changed settings are saved to your local device. There is currently no Reset Settings feature
 
