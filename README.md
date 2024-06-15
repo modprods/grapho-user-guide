@@ -17,7 +17,6 @@ User guide for the Grapho data science + storytelling toolkit
   - [Integrations](#integrations)
   - [Importers](#importer)
 - [Troubleshooting](#troubleshooting)
-- [Change Log](#changelog)
 
 # Introduction
 
@@ -100,7 +99,6 @@ Return to [Table of Contents](#table-of-contents).
 * Use the joystick to TELEPORT
 * Use [FORCE PULL](#ForcePull) to grab nodes from a distance
 * See [​GraphSummitSydney2024-induction](https://vimeo.com/943161258/f7311ebf2c) for explainer video of the core mechanic using Meta Quest 3
-* See Change Log for recent updates
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -111,7 +109,7 @@ Grapho XR builds are available for the following platforms.
 * PCVR
 * Mobile VR
 
-Grapho XR is available as plugins for third party development with the following frameworks 
+Grapho XR plugins and Grapho Development Guide are provided to customers for third party development with the following frameworks 
 * [Unreal Engine](https://unrealengine.com/) 5.4
 
 Return to [Table of Contents](#table-of-contents).
@@ -123,22 +121,29 @@ Return to [Table of Contents](#table-of-contents).
 * Intel Core i7-3930K/AMD FX 8350 equivalent or better
 * NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
 * 1 GB available space
-* Oculus or Steam VR compatible HMD (for PCVR)
+* Supported
     * Quest 2 / Quest Pro / Quest 3
     * Valve Index
     * HTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR
 
 NOTE Grapho XR's "desktop mode" (non-XR) support on Windows is provided for backwards compatibility, accessibility, and testing. We only recommend use of 3D visualisation on 3D displays for professional use given given research findings that 2D visualisation works better on a 2D displays. See [Dashboard](#dashboard) options for off-the-shelf and custom options. 
 
+### Mac OS
+
+* Coming soon
+    * Apple Vision Pro
+
 ### Mobile VR
 
-* Quest 2 / Quest Pro / Quest 3
-* Vive Focus 3 / Vive Elite XR
-* Controllers required
+* Supported
+    * Quest 2 / Quest Pro / Quest 3
+    * Vive Focus 3 / Vive Elite XR
+  Coming soon
+    * Apple Vision Pro
+
+Controllers are currently required. Hand tracking support on request. 
 
 We don't currently recommend hand tracking for precise manipulation of graph data for professional use.
-
-Hand tracking support on request. 
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -373,9 +378,6 @@ https://github.com/modprods/grapho-user-guide/issues
 
 Return to [Table of Contents](#table-of-contents).
 
-# Change Log
-
-Return to [Table of Contents](#table-of-contents).
 
 
 
