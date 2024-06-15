@@ -155,6 +155,12 @@ Meta Quest Touch Controller layout
 
 ![controls](img/grapho-controls-quest.png)
 
+### Passthrough (Quest only)
+
+Toggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.
+
+TIP Use this if real world surroundings make it too hard virtual objects.
+
 ### Teleport
 
 ![teleport](img/grapho-teleport.png)
