@@ -7,8 +7,9 @@ User guide for the Grapho data science + storytelling toolkit
 # Table of Contents
 
 - [Introduction](#introduction)
-- [Quickstart for Grapho XR](#quickstart-for-grapho-xr)
 - [Grapho XR](#grapho-xr)
+  - [Quickstart](#quickstart-for-grapho-xr)
+  - [Interactivity](#interactivity)
 - [Grapho VM](#grapho-vm)
 - [Online Services](#online-services)
   - [Dashboard](#dashboard)
@@ -60,17 +61,17 @@ Return to [Table of Contents](#table-of-contents).
 * Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)
 * Unzip Grapho build ZIP
 * Run Grapho.exe direct or use provided BAT file to specify VR or Desktop mode
- * RunGraphoVR.bat
-  * start ./Grapho.exe -vr (default)
- * RunGraphoDesktop.bat
-  * start ./Grapho.exe -noxrstereo (Desktop is for users without VR)
+    * RunGraphoVR.bat
+        * start ./Grapho.exe -vr (default)
+    * RunGraphoDesktop.bat
+        * start ./Grapho.exe -noxrstereo (Desktop is for users without VR)
 
 ### Mobile VR
 
 * Unzip Grapho build ZIP
 * Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)
 * Double click installer 
- * Android/Install_Grapho-Android-Shipping-arm64.bat
+    * Android/Install_Grapho-Android-Shipping-arm64.bat
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -100,15 +101,15 @@ Return to [Table of Contents](#table-of-contents).
 
 ### PCVR
 
- * Windows 10 or 11
- * 16 GB RAM or better
- * Intel Core i7-3930K/AMD FX 8350 equivalent or better
- * NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
- * 1 GB available space
- * Oculus or Steam VR compatible HMD (for PCVR)
-  * Quest 2 / Quest Pro / Quest 3
-  * Valve Index
-  * HTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR
+* Windows 10 or 11
+* 16 GB RAM or better
+* Intel Core i7-3930K/AMD FX 8350 equivalent or better
+* NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
+* 1 GB available space
+* Oculus or Steam VR compatible HMD (for PCVR)
+    * Quest 2 / Quest Pro / Quest 3
+    * Valve Index
+    * HTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR
 
 NOTE Grapho XR's "desktop mode" (non-XR) support on Windows is provided for backwards compatibility, accessibility, and testing. We only recommend use of 3D visualisation on 3D displays for professional use given given research findings that 2D visualisation works better on a 2D displays. See [Dashboard](#dashboard) options for off-the-shelf and custom options. 
 
@@ -132,7 +133,7 @@ Return to [Table of Contents](#table-of-contents).
 
 Push LEFT or RIGHT joystick forward to show reticule and direction arrow on the ground plane. Rotate joystick to change direction of the arrow. This determines what direction you teleport. Release joystick to teleport. 
 
-NOTE Users new to VR can get confused if they trigger teleport by mistake. You can change Settings | Teleport delay to adjust how responsive the joysticks are if this is a problem. 
+NOTE Users new to VR can get confused if they trigger teleport by mistake. You can change Settings > Teleport delay to adjust how responsive the joysticks are if this is a problem. 
 
 ### Grab
 
@@ -175,7 +176,7 @@ Flip again to close graph nodes.
 
 Press TRIGGER button to toggle opening and closing of a node to reveal its "Datapad" which shows the properties of a node. 
 
-Settings | Open Datapad on Grab checkbox controls whether this happens automatically on GRAB. It can get annoying sometimes to have this on but useful as a default for new starters.
+Settings > Open Datapad on Grab checkbox controls whether this happens automatically on GRAB. It can get annoying sometimes to have this on but useful as a default for new starters.
 
 ### Open Context Menu
 
