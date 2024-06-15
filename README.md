@@ -22,20 +22,16 @@ User guide for the Grapho data science + storytelling toolkit
 
 Welcome to the user guide for [Grapho](https://grapho.app) - a toolkit for data science + storytelling.
 
-* standard interaction mechanics across different datasets and applications
-* easy-to-use desktop, AR, and VR modes
-* desktop, mobile and cloud hosting options
-* developer-friendly integrations with Unreal Engine, Neo4j & python
+* standard interaction mechanics across different data sets and applications
+* easy-to-use desktop, mobile and XR features
+* convenient hosting options
+* developer-friendly integrations with Neo4j, python and Unreal Engine
 
 ![one-pager-grapho_b-tiles](img/one-pager-grapho_b-tiles.png)
 
 In 2024 data science is having a moment with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we've evolved - storytelling - and how we tell stories is changing. 
 
-This toolkit is for anyone anyone working with graph data. It empowers users to create data stories and draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho producitivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
-
-Read our SIGGRAPH2022 paper [A Clever Label: Multi-sensory VR data visualization for art, productivity and communication](https://dl.acm.org/doi/fullHtml/10.1145/3532834.3536206)
-
-[More screenshots on Flickr](https://www.flickr.com/photos/modproductions/albums/72177720306315648)
+This toolkit is for anyone anyone working with graph data. It empowers users to create data stories and draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho productivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -63,9 +59,11 @@ Grapho XR is a spatial graph visualisation tool and a new way to manage and pres
 
 It's an interactive experience that feels like Minority Report meets 60 Minutes. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
 
-See the [Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp) for more details
-
-See our ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
+See also
+* ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
+* [Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp) for more details
+* Our SIGGRAPH2022 paper [A Clever Label: Multi-sensory VR data visualization for art, productivity and communication](https://dl.acm.org/doi/fullHtml/10.1145/3532834.3536206)
+* [Screenshots on Flickr](https://www.flickr.com/photos/modproductions/albums/72177720306315648)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -92,6 +90,8 @@ Return to [Table of Contents](#table-of-contents).
 Return to [Table of Contents](#table-of-contents).
 
 ### Induction
+
+Grapho XR is configured by defaiult with a "demo" graph database - a small set of actors & movies in cross-referenced pop culture 
 
 * Reach out and grab the disk "Enter The Matrix" with the GRAB button
 * Flip it upside down to open
@@ -216,7 +216,7 @@ Move your hand off the menu and release <FACE BUTTON #1> to close menu without d
 
 #### Expand
 
-Context Menu | Expand 
+Context Menu > Expand 
 
 Any neighbouring node not already visible are spawned
 
@@ -290,15 +290,13 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Dashboard
 
-Graph data front-ends custom built for specific use cases from popular frameworks. 
+Grapho provides useful screens for managing your data whether these are off-the-shelf integrations or custom built for specific use cases from popular frameworks. 
 
-Integrations
+e.g. Neo4j Neodash Dashboard Builder
 
-* Neodash
-* Streamlit
-* Wagtail
+![graphsummitsydney2024-neodash](img/graphsummitsydney2024-neodash.png)
 
-Contact us for any new integration requests.
+See our [Integration options](#integrations) and contact us for any new integration ones you need.
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -318,9 +316,10 @@ Public release COMING SOON
 
 ### demo.grapho.app
 
-[Grapho XR](#GraphoXR) API
-* Provides access to curated sample graph data sets from Neo4j and local configuration files.
-* See https://demo.grapho.app/docs
+[Grapho XR](#Grapho-XR) default configuration includes this public instance of the Grapho API. It provides access to sample data sets.
+
+See also
+* [https://demo.grapho.app/docs](https://demo.grapho.app/docs)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -372,9 +371,7 @@ Return to [Table of Contents](#table-of-contents).
 
 We're here to help. Contact your Grapho representative for any issues.
 
-For general issues open issues here or add a New Issue
-
-https://github.com/modprods/grapho-user-guide/issues
+For general issues on Grapho or this documentation, see [https://github.com/modprods/grapho-user-guide/issues](https://github.com/modprods/grapho-user-guide/issues)
 
 Return to [Table of Contents](#table-of-contents).
 
