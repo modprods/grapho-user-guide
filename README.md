@@ -21,11 +21,22 @@ User guide for the Grapho data science + storytelling toolkit
 
 # Introduction
 
-Welcome to the user guide for Grapho - a toolkit for data science + storytelling.
+Welcome to the user guide for [Grapho](https://grapho.app) - a toolkit for data science + storytelling.
+
+* standard interaction mechanics across different datasets and applications
+* easy-to-use desktop, AR, and VR modes
+* desktop, mobile and cloud hosting options
+* developer-friendly integrations with Unreal Engine, Neo4j & python
+
+![one-pager-grapho_b-tiles](img/one-pager-grapho_b-tiles.png)
 
 In 2024 data science is having a moment with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we've evolved - storytelling - and how we tell stories is changing. 
 
 This toolkit is for anyone anyone working with graph data. It empowers users to create data stories and draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho producitivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
+
+Read our SIGGRAPH2022 paper [A Clever Label: Multi-sensory VR data visualization for art, productivity and communication](https://dl.acm.org/doi/fullHtml/10.1145/3532834.3536206)
+
+[More screenshots on Flickr](https://www.flickr.com/photos/modproductions/albums/72177720306315648)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -47,9 +58,15 @@ Return to [Table of Contents](#table-of-contents).
 
 # Grapho XR
 
-Grapho XR is a visualisation tool and a new way to manage and present graph data. It's an interactive experience that feels like Minority Report meets 60 Minutes. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
+Grapho XR is a spatial graph visualisation tool and a new way to manage and present graph data. 
+
+![one-pager-grapho-xr-tiles](img/one-pager-grapho-xr-tiles.png)
+
+It's an interactive experience that feels like Minority Report meets 60 Minutes. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
 
 See the [Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp) for more details
+
+See our ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
 
 Return to [Table of Contents](#table-of-contents).
 
