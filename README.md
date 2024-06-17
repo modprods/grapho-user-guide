@@ -61,7 +61,7 @@ Grapho XR is a spatial graph visualisation tool and a new way to manage and pres
 
 ![one-pager-grapho-xr-tiles](img/one-pager-grapho-xr-tiles.png)
 
-It's an interactive experience that feels like Minority Report meets 60 Minutes. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
+It's an interactive experience that feels like [Minority Report](https://en.wikipedia.org/wiki/Technologies_in_Minority_Report) meets 60 Minutes. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
 
 See also
 * ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
