@@ -15,7 +15,7 @@ User guide for the Grapho data science + storytelling toolkit
   - [Dashboard](#dashboard)
   - [API](#api)
   - [Integrations](#integrations)
-  - [Importers](#importer)
+- [Mixed Reality](#mixed-reality)
 - [Troubleshooting](#troubleshooting)
 
 # Introduction
@@ -31,15 +31,19 @@ Welcome to the user guide for [Grapho](https://grapho.app) - a toolkit for data 
 
 In 2024 data science is having a moment with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we've evolved - storytelling - and how we tell stories is changing. 
 
-This toolkit is for anyone anyone working with graph data. It empowers users to create data stories and draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho productivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
+This toolkit is for anyone anyone working with graph data. It empowers users to create data stories on any platform including spatial computing. It lets you draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho productivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
+
+[Contact us](https://mod.studio/where/) for more information.
 
 Return to [Table of Contents](#table-of-contents).
 
 # History
 
-Grapho started life as a spatial knowledge graph interface for a VR documentary [A Clever Label](https://acleverlabel.com) released on Steam in 2021 using a Neo4j backend. This was then spun out as a white label tool  [Grapho XR](#Grapho-XR) in 2022 for applied data science. Our first customer was [APNIC](https://www.apnic.net/). 
+Grapho started life as a spatial knowledge graph interface for a VR documentary [A Clever Label](https://acleverlabel.com) released on Steam in 2021 using a Neo4j backend. This was then spun out as a white label tool  [Grapho XR](#Grapho-XR) in 2022 for knowledge graphs. Our first customer was [APNIC](https://www.apnic.net/). 
 
-In 2024 a new ISO database language standard [Graph Query Language](https://www.iso.org/standard/76120.html) was published (the first in 37 years since SQL) that defines data structures and basic operations on property graphs largely.
+In 2024 [ISO 76120 - Graph Query Language (GQL)](https://www.iso.org/standard/76120.html) was published - the first database query language standard in 37 years since SQL. This provides a future-proof way of defining data structures and basic operations on property graphs. GQL is largely based on Neo4j's [CYPHER](https://neo4j.com/product/cypher-graph-query-language) language.
+
+In 2024 the Grapho service offering was expanded to applied data science including deep learning model creation and training. 
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -47,7 +51,7 @@ Return to [Table of Contents](#table-of-contents).
 
 Grapho is available through Mod's SaaS and consulting service.
 
-[Contact us](https://mod.studio/where/) for more information.
+[Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -61,7 +65,6 @@ It's an interactive experience that feels like Minority Report meets 60 Minutes.
 
 See also
 * ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
-* [Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp) for more details
 * Our SIGGRAPH2022 paper [A Clever Label: Multi-sensory VR data visualization for art, productivity and communication](https://dl.acm.org/doi/fullHtml/10.1145/3532834.3536206)
 * [Screenshots on Flickr](https://www.flickr.com/photos/modproductions/albums/72177720306315648)
 
@@ -69,7 +72,9 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Quickstart for Grapho XR
 
-### PCVR
+### Installation 
+
+#### PCVR
 
 * Run Meta Quest Link for Windows 
 * Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)
@@ -80,7 +85,7 @@ Return to [Table of Contents](#table-of-contents).
     * RunGraphoDesktop.bat
         * start ./Grapho.exe -noxrstereo (Desktop is for users without VR)
 
-### Mobile VR
+#### Mobile VR
 
 * Unzip Grapho build ZIP
 * Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)
@@ -91,14 +96,15 @@ Return to [Table of Contents](#table-of-contents).
 
 ### Induction
 
-Grapho XR is configured by defaiult with a "demo" graph database - a small set of actors & movies in cross-referenced pop culture 
+Grapho XR is configured by default with a "demo" graph database - a small set of actors & movies in cross-referenced pop culture 
 
-* Reach out and grab the disk "Enter The Matrix" with the GRAB button
-* Flip it upside down to open
-* Grab nodes with the GRAB button
-* Use the joystick to TELEPORT
-* Use [FORCE PULL](#ForcePull) to grab nodes from a distance
-* See [​GraphSummitSydney2024-induction](https://vimeo.com/943161258/f7311ebf2c) for explainer video of the core mechanic using Meta Quest 3
+* Enable [PASSTHROUGH](#passthrough) mode with the FACE BUTTON #2 button
+* Reach out and grab the object labelled "Enter The Matrix" with the [GRAB](#controls) button
+* Flip this "Handle" upside down to [open the graph](#open-graph)
+* Grab the spherical nodes (and the relationship lines connecting nodes) with the GRAB button
+* Use the joystick to [TELEPORT](#teleport)
+* Use [FORCE PULL](#force-pull) to grab nodes at a distance - point at node, press TRIGGER button, flick wrist upwards, release TRIGGER
+* See [explainer video](https://vimeo.com/943161258/f7311ebf2c) demonstrating the above core mechanic using Meta Quest 3
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -108,9 +114,6 @@ Grapho XR builds are available for the following platforms.
 
 * PCVR
 * Mobile VR
-
-Grapho XR plugins and Grapho Development Guide are provided to customers for third party development with the following frameworks 
-* [Unreal Engine](https://unrealengine.com/) 5.4
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -147,6 +150,14 @@ We don't currently recommend hand tracking for precise manipulation of graph dat
 
 Return to [Table of Contents](#table-of-contents).
 
+## Development Frameworks
+
+Grapho XR plugins and a separate Grapho Development Guide are provided to licensees for third party development with the following frameworks 
+
+* [Unreal Engine](https://unrealengine.com/) 5.4
+
+Return to [Table of Contents](#table-of-contents).
+
 ## Interactivity
 
 ### Controls
@@ -155,7 +166,9 @@ Meta Quest Touch Controller layout
 
 ![controls](img/grapho-controls-quest.png)
 
-### Passthrough (Quest only)
+### Passthrough 
+
+**Passthrough camera support is available on Quest and Vive mobile headsets. See [Mixed Reality](#mixed-reality) for PCVR camera support**
 
 Toggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.
 
@@ -279,22 +292,36 @@ NOTE - Changed settings are saved to your local device. There is currently no Re
 
 Return to [Table of Contents](#table-of-contents).
 
-# Grapho VM
+# Grapho Machines
 
-Grapho VMs (aka "Grapho Virtual Machines") are Linux virtual machine containers that package Grapho online services to be used on your local device, on-premises hosting or on cloud platforms.
+Grapho Machines (GMs) are re-distributable online services and how we package, deploy and operate online services in a standard way that recognises there is no one-size fits-all approach that will work for all use cases.
 
-We use [packer](https://www.packer.io/) and [terragrunt](https://terragrunt.gruntwork.io/) to keep on-premises and cloud-hosted virtual machine variants in sync.
+GMs include
 
-Supported virtual machine platforms
+* functionality - instances of the online services themselves
+* data - preset and instance-only data
 
-* Linux Containers (LXC)
-* Windows WSL2
-* Docker
-* AWS AMI
-* Virtual Box
-* VMWare
+GMs support a variety of container and virtual machine formats for use on your local device, on-premises hosting or on cloud platforms. 
 
-The default Grapho VM is a Debian LXC Container based roughly on the [VFX Reference Platform](https://vfxplatform.com/).
+We use packer and terragrunt to maintain [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) definitions of all Grapho Machines so that variants of a machine can be generated for multiple platforms as required.
+
+e.g. 
+* AMI for use on AWS
+* VHD for use on a local Windows machine
+* PVM for use on a local Mac machine
+
+Supported:
+
+* Virtual Machine Image Formats
+    * AMI
+    * VHD
+* Containers
+    * Linux Containers (LXC)
+    * Docker
+    * Virtual Box
+    * VMWare
+
+The default Grapho Machine is a Linux Debian instance serving LXC Containers that is based roughly on the [Academy Software Foundation's VFX Reference Platform](https://vfxplatform.com/).
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -378,6 +405,12 @@ Graphics Engines
 * Blender
 
 Return to [Table of Contents](#table-of-contents).
+
+# Mixed Reality
+
+## LIV 
+
+Grapho XR PCVR supports the LIV Mixed Reality for real-time live action video integration.
 
 # Troubleshooting
 
