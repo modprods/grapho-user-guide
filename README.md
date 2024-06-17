@@ -10,7 +10,7 @@ User guide for the Grapho data science + storytelling toolkit
 - [Grapho XR](#grapho-xr)
   - [Quickstart](#quickstart-for-grapho-xr)
   - [Interactivity](#interactivity)
-- [Grapho VM](#grapho-vm)
+- [Grapho Machine](#grapho-machine)
 - [Online Services](#online-services)
   - [Dashboard](#dashboard)
   - [API](#api)
@@ -292,20 +292,20 @@ NOTE - Changed settings are saved to your local device. There is currently no Re
 
 Return to [Table of Contents](#table-of-contents).
 
-# Grapho Machines
+# Grapho Machine
 
-Grapho Machines (GMs) are re-distributable online services and how we package, deploy and operate online services in a standard way that recognises there is no one-size fits-all approach that will work for all use cases.
+Grapho Machines (GMs) are re-distributable applications and online services. They are how we build, deploy, distribute and operate services in a standard way. There is no one-size fits-all approach that will work for all use cases so GMs provide an abstraction layer for delivering services across a variety of platforms as required.
 
 GMs include
 
-* functionality - instances of the online services themselves
-* data - preset and instance-only data
+* functionality - instances of any bundled applications and services
+* data - preset data, instance-generated data
 
 GMs support a variety of container and virtual machine formats for use on your local device, on-premises hosting or on cloud platforms. 
 
-We use packer and terragrunt to maintain [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) definitions of all Grapho Machines so that variants of a machine can be generated for multiple platforms as required.
+We use packer and terragrunt to maintain [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) definitions of all Grapho components to automated creation of Grapho Machine instances and GM variants for multiple platforms as required.
 
-e.g. 
+e.g. a Grapho Machine might be created as
 * AMI for use on AWS
 * VHD for use on a local Windows machine
 * PVM for use on a local Mac machine
@@ -321,7 +321,9 @@ Supported:
     * Virtual Box
     * VMWare
 
-The default Grapho Machine is a Linux Debian instance serving LXC Containers that is based roughly on the [Academy Software Foundation's VFX Reference Platform](https://vfxplatform.com/).
+[Contact us](https://mod.studio/where/) to discuss how we can accomodate any new infrastructure requirements not on this list.
+
+The default Grapho Machine is currently a Linux Debian instance that hosts LXC Containers based on the [Academy Software Foundation's VFX Reference Platform](https://vfxplatform.com/).
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -331,11 +333,11 @@ Return to [Table of Contents](#table-of-contents).
 
 Grapho provides useful screens for managing your data whether these are off-the-shelf integrations or custom built for specific use cases from popular frameworks. 
 
-e.g. Neo4j Neodash Dashboard Builder
+e.g. [Neo4j Neodash Dashboard Builder](https://neo4j.com/labs/neodash/)
 
 ![graphsummitsydney2024-neodash](img/graphsummitsydney2024-neodash.png)
 
-See our [Integration options](#integrations) and contact us for any new integration ones you need.
+See our list of [Integrations](#integrations) available below and [contact us](https://mod.studio/where) for any new integration requirements you might have.
 
 Return to [Table of Contents](#table-of-contents).
 
