@@ -160,6 +160,44 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Interactivity
 
+### User Interface
+
+The Grapho UI has the following key components
+
+* Handle
+
+A Handle is a special type of node that is a convenient handle to a section of a graph that speeds up navigation and helps manage clutter.
+
+Think of it as a pointer or a bookmark to a particular spot in a the graph.  
+
+![handle](img/what-is-a-handle.png)
+
+* Node
+
+The graph is made up of Nodes
+
+![handle](img/what-is-a-node.png)
+
+* Relationship
+
+Connections between nodes are relationships (or links)
+
+![handle](img/what-is-a-relationship.png)
+
+* Datapad
+
+Nodes properties (anything from multimedia to a simple list of text) appear on an attached surface - the data pad.
+
+![handle](img/what-is-a-datapad.png)
+
+* Context Menu
+
+Context menus allow you to perform actions on a particular node.
+
+![handle](img/what-is-a-content-menu.png)
+
+Return to [Table of Contents](#table-of-contents).
+
 ### Controls
 
 Meta Quest Touch Controller layout
@@ -208,10 +246,6 @@ Use natural hand movements to move objects out of the way
 ![handle-open](img/grapho-handle-open.png)
 
 Grab Handle. Flip Handle upside down to open graph nodes (run a query).
-
-A Handle is a special type of node that is a convenient handle to a section of a graph that speeds up navigation and helps manage clutter.
-
-You can think of it as a graph bookmark but technically it signposts a specify database query. I.e. the graph data returned may change.
 
 Flip again to close graph nodes.
 
