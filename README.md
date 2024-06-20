@@ -9,7 +9,8 @@ User guide for the Grapho data science + storytelling toolkit
 - [Introduction](#introduction)
 - [Grapho XR](#grapho-xr)
   - [Quickstart](#quickstart-for-grapho-xr)
-  - [Interactivity](#interactivity)
+  - [User Interface](#user-interface)
+  - [Controls](#controls)
 - [Grapho Machine](#grapho-machine)
 - [Online Services](#online-services)
   - [Dashboard](#dashboard)
@@ -158,9 +159,7 @@ Grapho XR plugins and a separate Grapho Development Guide are provided to licens
 
 Return to [Table of Contents](#table-of-contents).
 
-## Interactivity
-
-### User Interface
+## User Interface
 
 The Grapho UI has the following key components
 
@@ -198,7 +197,7 @@ Context menus allow you to perform actions on a particular node.
 
 Return to [Table of Contents](#table-of-contents).
 
-### Controls
+## Controls
 
 Meta Quest Touch Controller layout
 
