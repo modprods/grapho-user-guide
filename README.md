@@ -83,16 +83,17 @@ Return to [Table of Contents](#table-of-contents).
 * Unzip Grapho build ZIP
 * Run Grapho.exe direct or use provided BAT file to specify VR or Desktop mode
     * RunGraphoVR.bat
-        * start ./Grapho.exe -vr (default)
+        * `start ./Grapho.exe -vr` (default)
     * RunGraphoDesktop.bat
-        * start ./Grapho.exe -noxrstereo (Desktop is for users without VR)
+        * `start ./Grapho.exe -noxrstereo` (Desktop is for users without VR)
 
 #### Mobile VR
 
 * Unzip Grapho build ZIP
-* Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)
-* Double click installer 
-    * Android/Install_Grapho-Android-Shipping-arm64.bat
+* Connect your Quest to PC USB-C cable
+* Install [SideQuest](https://sidequestvr.com/) (unless you already have Android Studio or even just adb installed)
+* Unzip Grapho build ZIP
+* Install `Grapho-Android-Shipping-arm64.apk` via SideQuest | Install APK from file (right of WIFI icon)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -454,9 +455,9 @@ Grapho XR PCVR supports the LIV Mixed Reality for real-time live action video in
 
 # Troubleshooting
 
-We're here to help. Contact your Grapho representative for any issues.
+We're here to help.
 
-For general issues on Grapho or this documentation, see [https://github.com/modprods/grapho-user-guide/issues](https://github.com/modprods/grapho-user-guide/issues)
+For general issues on Grapho or this documentation, use [https://github.com/modprods/grapho-user-guide/issues](https://github.com/modprods/grapho-user-guide/issues) or contact your Grapho account manager.
 
 Return to [Table of Contents](#table-of-contents).
 
