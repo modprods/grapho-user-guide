@@ -194,7 +194,7 @@ Nodes properties (anything from multimedia to a simple list of text) appear on a
 
 Context menus allow you to perform actions on a particular node.
 
-![handle](img/what-is-a-content-menu.png)
+![handle](img/what-is-a-context-menu.png)
 
 Return to [Table of Contents](#table-of-contents).
 
