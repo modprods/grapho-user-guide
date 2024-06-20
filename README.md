@@ -188,7 +188,7 @@ Connections between nodes are relationships (or links)
 
 Nodes properties (anything from multimedia to a simple list of text) appear on an attached surface - the data pad.
 
-![handle](img/what-is-a-datapad.png)
+![datapad-gif](gif/scroll-datapad-small.gif)
 
 * Context Menu
 
@@ -228,9 +228,13 @@ Use GRIP button to grab object (handle, node, relationship).
 
 ### Force Pull
 
-![force-pull](img/grapho-force-pull.png)
+![force-pull-gif](gif/force-grab-alpha-small.gif)
 
 Force pull is a telekinesis-like feature that lets you quickly grab an object regardless of its distance from you.
+
+
+![force-pull](img/grapho-force-pull.png)
+
 
 VR mode:
 * Force pull - select object with the laser point extending from your virtual hand, pull TRIGGER and flick your wrist upward or to the side (like pulling a line on a fishing rod)
