@@ -18,6 +18,7 @@ User guide for the Grapho data science + storytelling toolkit
   - [Integrations](#integrations)
 - [Mixed Reality](#mixed-reality)
 - [Troubleshooting](#troubleshooting)
+- [Change Log](ChangeLog.md)
 
 # Introduction
 
