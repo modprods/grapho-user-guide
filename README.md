@@ -18,6 +18,7 @@ User guide for the Grapho data science + storytelling toolkit
   - [Integrations](#integrations)
 - [Mixed Reality](#mixed-reality)
 - [Troubleshooting](#troubleshooting)
+- [Support](#support)
 - [Change Log](ChangeLog.md)
 
 # Introduction
@@ -89,11 +90,11 @@ Return to [Table of Contents](#table-of-contents).
 
 #### Mobile VR
 
-* Unzip Grapho build ZIP
+* Unzip Grapho XR build ZIP
 * Connect your Quest to PC USB-C cable
 * Install [SideQuest](https://sidequestvr.com/) (unless you already have Android Studio or even just adb installed)
-* Unzip Grapho build ZIP
-* Install `Grapho-Android-Shipping-arm64.apk` via SideQuest | Install APK from file (right of WIFI icon)
+* Unzip Grapho XR build ZIP
+* Install the provided APK via SideQuest using "Install APK from file" (right of WIFI icon)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -461,7 +462,11 @@ For general issues on Grapho or this documentation, use [https://github.com/modp
 
 Return to [Table of Contents](#table-of-contents).
 
+# Support
 
+Email - support (AT) grapho (DOT) app
+
+Discord - post in channel #grapho on [Mod's Discord server](https://discord.gg/PPCaQD2)
 
 
 
