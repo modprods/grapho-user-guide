@@ -90,8 +90,8 @@ Return to [Table of Contents](#table-of-contents).
 
 #### Mobile VR
 
-* Unzip Grapho XR build ZIP
 * Connect your Quest to PC USB-C cable
+* [Enable Developer Mode](https://developer.oculus.com/documentation/native/android/mobile-device-setup/)
 * Install [SideQuest](https://sidequestvr.com/) (unless you already have Android Studio or even just adb installed)
 * Unzip Grapho XR build ZIP
 * Install the provided APK via SideQuest using "Install APK from file" (right of WIFI icon)
