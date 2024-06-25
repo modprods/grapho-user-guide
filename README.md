@@ -108,6 +108,10 @@ Grapho XR is configured by default with a "demo" graph database - a small set of
 * Grab the spherical nodes (and the relationship lines connecting nodes) with the GRAB button
 * Use the joystick to [TELEPORT](#teleport)
 * Use [FORCE PULL](#force-pull) to grab nodes at a distance - point at node, press TRIGGER button, flick wrist upwards, release TRIGGER
+* Switch to another sample database using the [Settings Menu](#settings-menu)
+    * Press the SETTINGS button on left controller
+    * Select a different Database
+    * Press the SETTINGS button again to return to the level
 * See [explainer video](https://vimeo.com/943161258/f7311ebf2c) demonstrating the above core mechanic using Meta Quest 3
 
 Return to [Table of Contents](#table-of-contents).
