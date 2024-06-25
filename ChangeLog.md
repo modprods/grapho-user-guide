@@ -13,7 +13,8 @@ Change Log for the Grapho data science + storytelling toolkit
 ## r6833
 
 * Grapho XR Demo 0.2.4a 
- * Settings | API ROOT URL not saved - config for additional servers is not saved
+ * Settings
+  * API ROOT URL not saved - config for additional servers is not saved
  * Otherwise functionally identical
 
 ## r6823
