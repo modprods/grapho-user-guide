@@ -212,7 +212,9 @@ Meta Quest Touch Controller layout
 
 ### Passthrough 
 
-**Passthrough camera support is available on Quest and Vive mobile headsets. See [Mixed Reality](#mixed-reality) for PCVR camera support**
+**Passthrough camera support is available on Quest and Vive mobile headsets but not on Windows. 
+
+See [Mixed Reality](#mixed-reality) for PCVR camera support for combining greenscreen live action footage and Grapho visualisation**
 
 Toggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.
 
@@ -335,6 +337,26 @@ NOTE - Changed settings are saved to your local device. There is currently no Re
 * Teleport Delay - increase delay to prevent accidentally use of teleport
 
 Return to [Table of Contents](#table-of-contents).
+
+## Spectator Mode
+
+### Windows ###
+
+The PCVR build of Grapho XR supports having a separate virtual camera with desktop user controls (separate view to what VR user can see) for collaborations.
+
+CONTROL + S - Toggle Spectator Camera
+
+WASD keys to move camera
+
+### Meta Quest ###
+
+Spectator mode is not yet available for mobile VR.
+
+However using [Meta Quest Developer Hub](https://developer.oculus.com/meta-quest-developer-hub/) > Casting > Start Forwarding Camera Input you can now remote operate the Quest virtual camera. 
+
+WARNING - do not attempt to use this while someone is wearing the HMD as this can make them very sick!
+
+![forward-input](img/forward-input.png)
 
 # Grapho Machine
 
