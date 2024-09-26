@@ -18,6 +18,7 @@ User guide for the Grapho data science + storytelling toolkit
   - [Integrations](#integrations)
 - [Mixed Reality](#mixed-reality)
 - [Troubleshooting](#troubleshooting)
+- [Use Cases](#use-cases)
 - [Support](#support)
 - [Change Log](ChangeLog.md)
 
@@ -38,9 +39,29 @@ This toolkit is for anyone anyone working with graph data. It empowers users to 
 
 [Contact us](https://mod.studio/where/) for more information.
 
+See the [Grapho Developers Guide](DevelopersGuide.md) for more information on preparing data and systems for Grapho.
+
 Return to [Table of Contents](#table-of-contents).
 
-# History
+## Benefits
+
+* Harness public and private domain knowledge
+* Fine tune your data for AI and ML training
+* Improve evaluation of complex systems and processes
+* Improve explanability of your insights
+
+Why "data science + storytelling"?
+
+Data is about people. Your people must understand the story your data is telling. As data scientists lean further into the astonishing power of Machine Learning, a one-size-fits-all automated approach is inadequate. In the age of AI, coherant storytelling is more valuable than ever.
+
+* Data management (leadership)
+* Data architecture (documentation and mapping)
+* Data design (analysis and visualisation)
+* Data engineering (building)
+* Data operations (maintaining)
+* Data science (research and development)
+
+## History
 
 Grapho started life as a spatial knowledge graph interface for a VR documentary [A Clever Label](https://acleverlabel.com) released on Steam in 2021 using a Neo4j backend. This was then spun out as a white label tool  [Grapho XR](#Grapho-XR) in 2022 for knowledge graphs. Our first customer was [APNIC](https://www.apnic.net/). 
 
@@ -391,6 +412,8 @@ Supported:
 
 The default Grapho Machine is currently a Linux Debian instance that hosts LXC Containers based on the [Academy Software Foundation's VFX Reference Platform](https://vfxplatform.com/).
 
+See the [Grapho Developers Guide](DevelopersGuide.md) for more information on preparing data and systems for Grapho.
+
 Return to [Table of Contents](#table-of-contents).
 
 # Online Services
@@ -479,6 +502,48 @@ Return to [Table of Contents](#table-of-contents).
 ## LIV 
 
 Grapho XR PCVR supports the LIV Mixed Reality for real-time live action video integration.
+
+# Use Cases
+
+Grapho has been deployed for a variety of use cases across major projects in different sectors.
+
+* Organisational knowledge & asset management
+* Topological machine learning
+* Collection management
+* Data activation
+* Training & simulation
+* Production knowledge management
+* Narrative design & worldbuilding
+
+## Sectors
+
+* Enterprise knowledge management
+* Cultural heritage
+* Media & entertainment
+* Video games
+* Civil engineering
+
+## Case Studies
+
+*Asia-Pacific Network Information Centre (APNIC)*
+
+The APNIC Visualisation Tool was built with Grapho XR to provide internal staff with a resource for network graph exploration and analysis on desktop and in VR. 
+
+*Parramatta Light Rail*
+
+Grapho tools were used to model and illustrate the complex interplay between people, processes and technology for the Software Management Plan.
+
+*Japan Broadcasting Corporation (NHK)*
+
+Grapho was used to design and prototype a digital human agent that communicated in Japanese sign language on broadcast TV.  
+
+*National Film & Sound Archive (NFSA)*
+
+Grapho tools are being used to update the service framework for Australia's national multimedia collection, including a knowledge graph and a topological machine learning pipeline.
+
+*A Clever Label*
+
+Grapho XR's first iteration was as the core mechanic behind Mod's VR investigative documentary, (A Clever Label (2021))[https://acleverlabel.com], available on Steam.
 
 # Troubleshooting
 
