@@ -525,41 +525,44 @@ Grapho has been deployed for a variety of use cases across major projects in dif
 
 ## Case Studies
 
-*Asia-Pacific Network Information Centre (APNIC)*
+### Asia-Pacific Network Information Centre (APNIC)
+
+![APNIC](img/projects/grapho-docs-case-studies-apnic.jpg)
+
 
 The APNIC Visualisation Tool was built with Grapho XR to provide internal staff with a resource for network graph exploration and analysis on desktop and in VR. 
 
-*Parramatta Light Rail*
+### Parramatta Light Rail
 
 ![Parramatta-Light-Rail](img/projects/grapho-docs-case-studies-parramatta-lr.jpg)
 
 Grapho tools were used to model and illustrate the complex interplay between people, processes and technology for the Software Management Plan.
 
-*Japan Broadcasting Corporation (NHK)*
+### Japan Broadcasting Corporation (NHK)
 
-![NHK](img/projects/grapho-docs-case-studies-jsl.jpg)
+![NHK](img/projects/grapho-docs-case-studies-nhk.jpg)
 
 Grapho was used to design and prototype a digital human agent that communicated in Japanese sign language on broadcast TV.  
 
-*National Film & Sound Archive (NFSA)*
+### National Film & Sound Archive (NFSA)
 
 ![NFSA](img/projects/grapho-docs-case-studies-nfsa.jpg)
 
 Grapho tools are being used to update the service framework for Australia's national multimedia collection, including a knowledge graph and a topological machine learning pipeline.
 
-*Neo4j*
+### Neo4j
 
 ![Neo4j](img/projects/grapho-docs-case-studies-neo4j.jpg)
 
 Neo4j field engineers and marketing managers use Grapho XR to  trade show visitor
 
-*A Clever Label*
+### A Clever Label
 
 ![ACL](img/projects/grapho-docs-case-studies-acl.jpg)
 
 Grapho XR's first iteration was as the core mechanic behind Mod's VR investigative documentary, (A Clever Label (2021))[https://acleverlabel.com], available on Steam.
 
-*Mod*
+### Mod
 
 ![Mod](img/projects/grapho-docs-case-studies-headbin.jpg)
 
