@@ -554,7 +554,7 @@ Grapho tools are being used to update the service framework for Australia's nati
 
 ![Neo4j](img/projects/grapho-docs-case-studies-neo4j.jpg)
 
-Neo4j field engineers and marketing managers use Grapho XR to  trade show visitor
+Neo4j field engineers and marketing managers use Grapho XR to help visitors to their trade show stand get a handle (literally!) on graph databases.
 
 ### A Clever Label
 
