@@ -36,16 +36,15 @@ The following Label types have specific implementations
 
 The following properties have specific implementations
 
-| name | type | e.g. | description | 
-| -----| ---- | ---- | ----------- |
-| name | str | "My node" | used as default label
-| colour OR color | str | "#ffffff" | override colour style | 
-| voiceover_override | bool | true | if true, voiceover is allowed to interrupt current voiceover, otherwise this is queued |
-| voiceover_url | str | 
-https://d1pxeqjdb63hyy.cloudfront.net/media/media/test-ux.ogg
- | plays voiceover when node opened. Supports WAV, MP3 and OGG formats  |
-| image_url | str | https://d1pxeqjdb63hyy.cloudfront.net/media/images/node_end-to-end-testing.original.png | displays image when node opened. Supports JPG, PNG |
-| subtitles_url | str | https://mod.studio/documents/64/test-ux.vtt  | displays subtitles when node opened - if voiceover_url available. Supports VTT and SRT formats |
+| name               | type  | e.g.      | description                                                                                                  |
+|--------------------|-------|-----------|--------------------------------------------------------------------------------------------------------------|
+| name               | str   | "My node" | used as default label                                                                                         |
+| colour OR color    | str   | "#ffffff" | override colour style                                                                                        |
+| voiceover_override | bool  | true      | if true, voiceover is allowed to interrupt current voiceover, otherwise this is queued                        |
+| voiceover_url      | str   | https://d1pxeqjdb63hyy.cloudfront.net/media/media/test-ux.ogg | plays voiceover when node opened. Supports WAV, MP3, and OGG formats  |
+| image_url          | str   | https://d1pxeqjdb63hyy.cloudfront.net/media/images/node_end-to-end-testing.original.png | displays image when node opened. Supports JPG, PNG  |
+| subtitles_url      | str   | https://mod.studio/documents/64/test-ux.vtt | displays subtitles when node opened - if voiceover_url available. Supports VTT and SRT formats |
+
 
 ## relationship
 
