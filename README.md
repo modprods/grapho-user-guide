@@ -560,13 +560,13 @@ Neo4j field engineers and marketing managers use Grapho XR to help visitors to t
 
 ![ACL](img/projects/grapho-docs-case-studies-acl.jpg)
 
-Grapho XR's first iteration was as the core mechanic behind Mod's VR investigative documentary, (A Clever Label (2021))[https://acleverlabel.com], available on Steam.
+Grapho XR's first iteration was as the core mechanic behind Mod's VR investigative documentary, [A Clever Label](https://acleverlabel.com), available on Steam.
 
 ### Mod
 
 ![Mod](img/projects/grapho-docs-case-studies-headbin.jpg)
 
-Property graphs form a core component of Mod's studio pipeline - tracking physical and digital IP as well as managing storyworlds and productions.
+Property graphs form a core component of Mod's studio management and production pipeline - tracking physical and digital IP as well as managing storyworlds and productions.
 
 # Troubleshooting
 
