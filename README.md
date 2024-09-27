@@ -50,7 +50,7 @@ Return to [Table of Contents](#table-of-contents).
 * Improve evaluation of complex systems and processes
 * Improve explanability of your insights
 
-Why "data science + storytelling"?
+## Why "data science + storytelling"?
 
 Data is about people. Your people must understand the story your data is telling. As data scientists lean further into the astonishing power of Machine Learning, a one-size-fits-all automated approach is inadequate. In the age of AI, coherant storytelling is more valuable than ever.
 
@@ -541,9 +541,17 @@ Grapho was used to design and prototype a digital human agent that communicated 
 
 Grapho tools are being used to update the service framework for Australia's national multimedia collection, including a knowledge graph and a topological machine learning pipeline.
 
+*Neo4j*
+
+Neo4j field engineers and marketing managers use Grapho XR to  trade show visitor
+
 *A Clever Label*
 
 Grapho XR's first iteration was as the core mechanic behind Mod's VR investigative documentary, (A Clever Label (2021))[https://acleverlabel.com], available on Steam.
+
+*Mod*
+
+Property graphs form a core component of Mod's studio pipeline - tracking physical and digital IP as well as managing storyworlds and productions.
 
 # Troubleshooting
 

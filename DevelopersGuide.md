@@ -40,10 +40,12 @@ The following properties have specific implementations
 | -----| ---- | ---- | ----------- |
 | name | str | "My node" | used as default label
 | colour OR color | str | "#ffffff" | override colour style | 
-| voiceover_override | bool | | true | if true, voiceover is allowed to interrupt current voiceover, otherwise this is queued |
-| voiceover_url | str | <URL> | plays voiceover when node opened  |
-| image_url | str | <URL> | displays image when node opened  |
-| subtitles_url | str | <URL>  | displays subtitles when node opened - if voiceover_url available |
+| voiceover_override | bool | true | if true, voiceover is allowed to interrupt current voiceover, otherwise this is queued |
+| voiceover_url | str | 
+https://d1pxeqjdb63hyy.cloudfront.net/media/media/test-ux.ogg
+ | plays voiceover when node opened. Supports WAV, MP3 and OGG formats  |
+| image_url | str | https://d1pxeqjdb63hyy.cloudfront.net/media/images/node_end-to-end-testing.original.png | displays image when node opened. Supports JPG, PNG |
+| subtitles_url | str | https://mod.studio/documents/64/test-ux.vtt  | displays subtitles when node opened - if voiceover_url available. Supports VTT and SRT formats |
 
 ## relationship
 
@@ -51,7 +53,7 @@ The following properties have specific implementations
 
 | name | type | e.g. | description | 
 | -----| ---- | ---- | ----------- |
-| colour OR color | string | "#ffffff" | override colour style | 
+| colour OR color | string | "#ffffff" | overrides colour style defined in the app | 
 
 
 <!-- # Console Variables -->
