@@ -16,7 +16,7 @@ Change Log for the Grapho data science + storytelling toolkit
 Added
 * Settings | Teleport Enabled toggle - placeholder ahead of more Player Movement options in development 
 * Settings | API & Database saved to disk for use across sessions (re-install app to restore default settings)
-* Offline use - all data and media is cached locally and can still be used if API unreachable (along with a warning pop-up shown)
+* Offline use - data and media is cached locally and can still be used if API unreachable (along with a warning pop-up shown)
 
 Fixes
 
