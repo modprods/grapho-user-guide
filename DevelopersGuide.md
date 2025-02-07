@@ -113,7 +113,7 @@ Set up your own Grapho XR experience from scratch, all you need is a recent Meta
     * Click "Next"
     * Click PLAY icon in the code block
     * Note the new  "Node labels" and "Relationship types" appearing under "Database Information" (left column)
-    * Copy the following CYPHER query into the Browser prompt>
+    * Copy the following CYPHER query into the Neo4j Browser CLI
 
 ```
 // Merge first handle
@@ -180,7 +180,9 @@ http://<YOUR SERVER LAN IP>:5042
 * <the "Enter the Matrix" handle should spawn>
 * Use GRAB button to grab handle and flip it over to open
 
-You now have your own Grapho service equivalent to [demo.grapho.app](README.md#demographoapp) 
+You now have your own Grapho service equivalent to [demo.grapho.app](README.md#demographoapp). 
+
+See /deploy in source code for example configurations when using grapho-server in production.
 
 See [Properties](#properties) for how to prepare your graph for use in Grapho. 
 
