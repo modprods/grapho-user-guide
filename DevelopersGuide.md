@@ -108,9 +108,11 @@ Set up your own Grapho XR experience from scratch, all you need is a recent Meta
     * Download and install Neo4j Desktop
     * Create and run a new Neo4j database
     * Open the database (with Browser)
-    * Click Guides | :guide movie-graph | Next
-    * Click the PLAY icon in the code block
-    * Note the new  "Node labels" and "Relationship types" that appear under Database Information (left column)
+    * Click Guides
+    * Click ":guide movie-graph"
+    * Click "Next"
+    * Click PLAY icon in the code block
+    * Note the new  "Node labels" and "Relationship types" appearing under "Database Information" (left column)
     * Copy the following CYPHER query into the Browser prompt>
 
 ```
@@ -121,7 +123,9 @@ WITH n
 MATCH (o:Movie {title:a'The Matrix'})
 MERGE (n)-[:NEXT]->(o)
 RETURN n, o
-```
+````
+
+* 
     * Click the RUN icon (blue arrow to the right of prompt)
 
 2) Run grapho-server container in Docker Desktop
@@ -144,13 +148,15 @@ PUBLIC_URL = "http://<YOUR SERVER LAN IP>:5042"
 QUERY_LIMIT = 300
 INCLUDE_FIXED_QUERIES = False
 ```
-
+*  
     * Run the server
 
 ```
 pipenv run python api.py
 ```
+*  
     * Confirm the server is running locally by checking PUBLIC_URL in your browser
+
 ```
 i.e.
 http://<YOUR SERVER LAN IP>:5042

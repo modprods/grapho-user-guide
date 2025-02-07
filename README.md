@@ -184,7 +184,7 @@ NOTE Grapho XR's "desktop mode" (non-XR) support on Windows is provided for back
 * Supported
     * Quest 2 / Quest Pro / Quest 3 / Quest 3S
     * Vive Focus 3 / Vive Elite XR
-  Coming soon
+* Coming soon
     * Apple Vision Pro
 
 Controllers are currently required. Hand tracking support on request. 
@@ -443,7 +443,7 @@ This provides a thin abstraction layer to help manage vendor lock-in and provide
 See the [Grapho Developers Guide](DevelopersGuide.md#grapho-server) for information on how to setup and run your own Grapho services.
 
 
-### demo.grapho.apphttps://file+.vscode-resource.vscode-cdn.net/d%3A/git/grapho-user-guide/DevelopersGuide.md#grapho-server
+### demo.grapho.app
 
 We provide a public demo grapho-server at [https://demo.grapho.app](https://demo.grapho.app) with some sample graphs.
 
