@@ -195,10 +195,13 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Development Frameworks
 
-Grapho XR plugins and a separate Grapho Development Guide are provided to licensees for third party development with the following frameworks 
+See [Grapho Machine](#grapho-machine) for details on Grapho service components and development options.
 
-* [Unreal Engine](https://unrealengine.com/) 5.4
+Grapho XR source code is available to licensees for custom development with the following frameworks 
 
+* [Unreal Engine](https://unrealengine.com/)
+
+Grapho 
 Return to [Table of Contents](#table-of-contents).
 
 ## User Interface
