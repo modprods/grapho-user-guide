@@ -147,7 +147,7 @@ Grapho XR is configured by default with a "demo" graph database - a small set of
     * Press the SETTINGS button on left controller
     * Select a different Database
     * Press the SETTINGS button again to return to the level
-* See [explainer video](https://vimeo.com/943161258/f7311ebf2c) demonstrating the above core mechanic using Meta Quest 3
+* See [explainer video](https://vimeo.com/1025517678/2b7f1b0133?ts=0&share=copy) showing the Grapho core mechanic on Meta Quest 3 (note - this is a custom build for a client)
 
 Return to [Table of Contents](#table-of-contents).
 
