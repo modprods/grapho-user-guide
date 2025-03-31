@@ -81,7 +81,7 @@ Return to [Table of Contents](#table-of-contents).
 
 # Grapho XR
 
-Grapho XR is a spatial graph visualisation tool and a new way to manage and present graph data. 
+Grapho XR is a spatial graph visualisation tool and a new way to manage and present graph data.
 
 ![one-pager-grapho-xr-tiles](img/one-pager-grapho-xr-tiles.png)
 
@@ -111,11 +111,25 @@ Return to [Table of Contents](#table-of-contents).
 
 #### Mobile VR
 
+##### Grapho XR Demo
+
+Download the free [Grapho XR Demo for Meta Quest](https://www.meta.com/en-gb/experiences/grapho-xr-demo/9765613903465624) from the Meta Store.
+
+For PCVR demos, [contact us](#support).
+
+##### Custom builds
+
+Grapho licensees can sideload their APK onto their XR hardware or use Unreal Engine Editor to build.
+
+To sideload 
+
 * Connect your Quest to PC USB-C cable
 * [Enable Developer Mode](https://developer.oculus.com/documentation/native/android/mobile-device-setup/)
-* Install [SideQuest](https://sidequestvr.com/) (unless you already have Android Studio or even just adb installed)
-* Unzip Grapho XR build ZIP
-* Install the provided APK via SideQuest using "Install APK from file" (right of WIFI icon)
+* Install [Meta Quest Developer Hub](https://developers.meta.com/horizon/documentation/unity/ts-odh-getting-started) OR [SideQuest](https://sidequestvr.com/) (unless you already have Android Studio or even just adb installed)
+* Unzip your provide Grapho XR build ZIP
+* Install the provided APK to connected HMD
+    * via Meta Quest Developer Hub - drag APK onto right side of the UI
+    * via SideQuest - using "Install APK from file" (right of WIFI icon)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -133,7 +147,7 @@ Grapho XR is configured by default with a "demo" graph database - a small set of
     * Press the SETTINGS button on left controller
     * Select a different Database
     * Press the SETTINGS button again to return to the level
-* See [explainer video](https://vimeo.com/943161258/f7311ebf2c) demonstrating the above core mechanic using Meta Quest 3
+* See [explainer video](https://vimeo.com/1025517678/2b7f1b0133?ts=0&share=copy) showing the Grapho core mechanic on Meta Quest 3 (note - this is a custom build for a client)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -154,7 +168,7 @@ Return to [Table of Contents](#table-of-contents).
 * NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better
 * 1 GB available space
 * Supported
-    * Quest 2 / Quest Pro / Quest 3
+    * Quest 2 / Quest Pro / Quest 3 / Quest 3S
     * Valve Index
     * HTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR
 
@@ -168,9 +182,9 @@ NOTE Grapho XR's "desktop mode" (non-XR) support on Windows is provided for back
 ### Mobile VR
 
 * Supported
-    * Quest 2 / Quest Pro / Quest 3
+    * Quest 2 / Quest Pro / Quest 3 / Quest 3S
     * Vive Focus 3 / Vive Elite XR
-  Coming soon
+* Coming soon
     * Apple Vision Pro
 
 Controllers are currently required. Hand tracking support on request. 
@@ -181,17 +195,20 @@ Return to [Table of Contents](#table-of-contents).
 
 ## Development Frameworks
 
-Grapho XR plugins and a separate Grapho Development Guide are provided to licensees for third party development with the following frameworks 
+See [Grapho Machine](#grapho-machine) for details on Grapho service components and development options.
 
-* [Unreal Engine](https://unrealengine.com/) 5.4
+Grapho XR source code is available to licensees for custom development with the following frameworks 
 
+* [Unreal Engine](https://unrealengine.com/)
+
+Grapho 
 Return to [Table of Contents](#table-of-contents).
 
 ## User Interface
 
 The Grapho UI has the following key components
 
-* Handle
+### Handle
 
 A Handle is a special type of node that is a convenient handle to a section of a graph that speeds up navigation and helps manage clutter.
 
@@ -199,25 +216,25 @@ Think of it as a pointer or a bookmark to a particular spot in a the graph.
 
 ![handle](img/what-is-a-handle.png)
 
-* Node
+### Node
 
 The graph is made up of Nodes
 
 ![handle](img/what-is-a-node.png)
 
-* Relationship
+### Relationship
 
 Connections between nodes are relationships (or links)
 
 ![handle](img/what-is-a-relationship.png)
 
-* Datapad
+### Datapad
 
 Nodes properties (anything from multimedia to a simple list of text) appear on an attached surface - the data pad.
 
 ![datapad-gif](gif/scroll-datapad-small.gif)
 
-* Context Menu
+### Context Menu
 
 Context menus allow you to perform actions on a particular node.
 
@@ -363,7 +380,7 @@ Return to [Table of Contents](#table-of-contents).
 
 ### Windows ###
 
-The PCVR build of Grapho XR supports having a separate virtual camera with desktop user controls (separate view to what VR user can see) for collaborations.
+PCVR builds of Grapho XR include a second "Spectator" virtual camera you can control from the desktop (separate view to what VR user can see). This is a cheap and cheerful way of hosting data exploration sessions with a group.
 
 CONTROL + S - Toggle Spectator Camera
 
@@ -418,6 +435,34 @@ Return to [Table of Contents](#table-of-contents).
 
 # Online Services
 
+## API
+
+grapho-server is a lightweight reference API server for the [GraphoXR](#grapho-xr) spatial browser.
+
+Source code and documentation is available on [Github](https://github.com/modprods/grapho-server)
+
+This provides a thin abstraction layer to help manage vendor lock-in and provide data to Grapho applications in a consistent manner as part of a manageable pipeline.
+
+See the [Grapho Developers Guide](DevelopersGuide.md#grapho-server) for information on how to setup and run your own Grapho services.
+
+
+### demo.grapho.app
+
+We provide a public demo grapho-server at [https://demo.grapho.app](https://demo.grapho.app) with some sample graphs.
+
+[Grapho XR Demo](#grapho-xr-demo) connects to this server by default. 
+
+e.g. Run [Grapho XR Demo](#grapho-xr-demo)
+
+* The default database "demo" displays a handle "Enter the Matrix"
+* Opening this handle reveals a node "The Matrix" from Neo4j's sample Movie Graph.
+* Expanding this node reveals all connected nodes.
+
+See also
+* [https://demo.grapho.app/docs](https://demo.grapho.app/docs)
+
+Return to [Table of Contents](#table-of-contents).
+
 ## Dashboard
 
 Grapho provides useful screens for managing your data whether these are off-the-shelf integrations or custom built for specific use cases from popular frameworks. 
@@ -427,29 +472,6 @@ e.g. [Neo4j Neodash Dashboard Builder](https://neo4j.com/labs/neodash/)
 ![graphsummitsydney2024-neodash](img/graphsummitsydney2024-neodash.png)
 
 See our list of [Integrations](#integrations) available below and [contact us](https://mod.studio/where) for any new integration requirements you might have.
-
-Return to [Table of Contents](#table-of-contents).
-
-## API
-
-grapho-server is a sample python REST API service available to Grapho customers
-
-This provides a thin abstraction layer to help manage vendor lock-in and provide data to Grapho applications in a consistent manner as part of a manageable pipeline.
-
-Features
-* OpenAPI compliant documentation
-* REST API endpoints for graph database queries
-* Mux database queries (e.g. CYPHER, SQL) with local config
-* Support for running on local desktop, on-premise hosting and cloud platforms
-
-Public release COMING SOON
-
-### demo.grapho.app
-
-[Grapho XR](#Grapho-XR) default configuration includes this public instance of the Grapho API. It provides access to sample data sets.
-
-See also
-* [https://demo.grapho.app/docs](https://demo.grapho.app/docs)
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -572,7 +594,7 @@ Property graphs form a core component of Mod's studio management and production 
 
 We're here to help.
 
-For general issues on Grapho or this documentation, use [https://github.com/modprods/grapho-user-guide/issues](https://github.com/modprods/grapho-user-guide/issues) or contact your Grapho account manager.
+For general issues with Grapho or this documentation, use [https://github.com/modprods/grapho-user-guide/issues](https://github.com/modprods/grapho-user-guide/issues) or contact your Grapho account manager.
 
 Return to [Table of Contents](#table-of-contents).
 

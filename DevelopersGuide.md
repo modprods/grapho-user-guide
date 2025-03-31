@@ -15,7 +15,6 @@ See  [Grapho User Guide](README.md) for non-developer documentation.
 
 # Properties
 
-
 Grapho is designed around the power and simplicity of property graph databases. ie. where both database nodes and relationships (edges) can be assigned key / value properties. 
 
 Your source data does not necessarily need to be stored in a graph database but if it is, you can take immediate advantage of Grapho tool features
@@ -65,5 +64,126 @@ Grapho Machine tools are typically preset with credentials to your database inst
 
 When building a Grapho Machine from scratch, copy the env.sample file in each component to .env and fill in your real credentials.
 
+## grapho-server
+
+grapho-server is a lightweight reference API server for the [GraphoXR](README.md#grapho-xr) spatial browser.
+
+Source code and documentation is available at [https://github.com/modprods/grapho-server](https://github.com/modprods/grapho-server)
+
+Features
+
+* OpenAPI compliant documentation
+* REST API endpoints for graph database queries
+    * all - load all editorially curated paths (via their "handles") 
+    * game - load a complete graph for offline use
+* Mux database queries (e.g. CYPHER, SQL) with local config
+* Support for running on local desktop, on-premise hosting and cloud platforms
+
+Handles
+
+"Handles" are the mechanism by which editorially curated paths through your graph data are served to Grapho clients like  [GraphoXR](README.md#grapho-xr). 
+
+Use Handles to design, curate and manage your graph data experiences.
+
+Handles are simply nodes with the label "Handle". They have special significence and are [rendered differently](README.md#handle) to other [nodes](README.md#node).
+
+Use Handles to 
+* The /all REST API method returns all Handles in the database
+* By default, selecting a Grapho database in Grapho XR will spawn all Handles as [Tron-like disks](README.md#handle).
+* [Opening a Handle](README.md#open-graph) in a Grapho client will reveal all nodes linked to this Handle. 
+* Handles can be configured to serve any style of data
+* By default Handles are configured to
+ * Return the path of all nodes connected to me via the relationship NEXT
+ * Return all nodes that are linked to this path by no more than 1 node (i.e. distance = 1) 
+
+### grapho-server quickstart
+
+To start exploring your own data, try creating a Handle linking to an existing node in your database.
+
+Set up your own Grapho XR experience from scratch, all you need is a recent Meta Quest headset and the following free resources.
+
+1) Run Neo4j Desktop
+
+* On your desktop or laptop
+    * Download and install Neo4j Desktop
+    * Create and run a new Neo4j database
+    * Open the database (with Browser)
+    * Click Guides
+    * Click ":guide movie-graph"
+    * Click "Next"
+    * Click PLAY icon in the code block
+    * Note the new  "Node labels" and "Relationship types" appearing under "Database Information" (left column)
+    * Copy the following CYPHER query into the Neo4j Browser CLI
+
+```
+// Merge first handle
+MERGE (n:Handle {label:'Enter the Matrix'})
+SET n.name = n.label
+WITH n
+MATCH (o:Movie {title:a'The Matrix'})
+MERGE (n)-[:NEXT]->(o)
+RETURN n, o
+````
+
+* 
+    * Click the RUN icon (blue arrow to the right of prompt)
+
+2) Run grapho-server container in Docker Desktop
+
+* On your desktop or laptop
+    * Download and install Docker Desktop
+    * Run a Docker container of grapho-server (see separate instructions)
+    * Connect to your running container and update the .env configuration file to match your Neo4j database and LAN IP settings
+
+```
+# Neo4J FQHN
+NEO4J_HOST = "host.docker.internal"
+NEO4J_USER = "neo4j"
+NEO4J_PASSWORD = "<INSERT PASSWORD>"
+NEO4J_PORT_HTTP = 7474
+NEO4J_PORT_BOLT = 7687
+# uncomment next line to ignore dynamic db parameter and hardcode this
+#NEO4J_DATABASE = "neo4j"
+PUBLIC_URL = "http://<YOUR SERVER LAN IP>:5042"
+QUERY_LIMIT = 300
+INCLUDE_FIXED_QUERIES = False
+```
+*  
+    * Run the server
+
+```
+pipenv run python api.py
+```
+*  
+    * Confirm the server is running locally by checking PUBLIC_URL in your browser
+
+```
+i.e.
+http://<YOUR SERVER LAN IP>:5042
+```
+
+3) Run Grapho XR Demo on Meta Quest HMD
+
+* Open Browser
+* Confirm you can access grapho-server URL (you may need to give permission for "unsafe" URL)
+
+```
+i.e.
+http://<YOUR SERVER LAN IP>:5042
+```
+* Copy URL
+* Install and run the free [Grapho XR Demo](README.md#grapho-xr-demo) from Meta Store
+* Press SETTINGS button (three vertical lines) on left controller
+* Click "Paste" button under API_ROOT_URL
+* Select your database name under Database
+* Press SETTINGS button to close panel
+* <the "Enter the Matrix" handle should spawn>
+* Use GRAB button to grab handle and flip it over to open
+
+You now have your own Grapho service equivalent to [demo.grapho.app](README.md#demographoapp). 
+
+See /deploy in source code for example configurations when using grapho-server in production.
+
+See [Properties](#properties) for how to prepare your graph for use in Grapho. 
 
 
