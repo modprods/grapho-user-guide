@@ -16,7 +16,7 @@ Change Log for the Grapho data science + storytelling toolkit
 Added
 * Added thumbstick scrolling to Settings menus
 * Procedural layout of graph handles
-* Settings | Advanced
+* Settings \| Advanced
     * Reset Settings
     * Handle Max Height
 * Support for Sequencer controlled handles and nodes  - see demo Help handle
