@@ -7,9 +7,25 @@ Change Log for the Grapho data science + storytelling toolkit
 # Table of Contents
 
 - [GraphoXR](#grapho-xr)
-  - [Oculus](#oculus)
+  - [Meta Quest](#quest)
 
-# Oculus
+# Grapho XR for Meta Quest
+
+## r7280
+
+Added
+* Added thumbstick scrolling to Settings menus
+* Procedural layout of graph handles
+* Settings | Advanced
+    * Reset Settings
+    * Handle Max Height
+* Support for Sequencer controlled handles and nodes  - see demo Help handle
+
+Fixes
+* Datapad default UI display of metadata
+* General performance improvements and bug fixes
+
+Meta Quest Store build id: "2.1 Code: 11"
 
 ## r6966
 
