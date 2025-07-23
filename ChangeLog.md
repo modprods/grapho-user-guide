@@ -11,6 +11,15 @@ Change Log for the Grapho data science + storytelling toolkit
 
 # Grapho XR for Meta Quest
 
+## r7432
+* Added download progress bars when downloading data from an API
+* Updated pointer visuals for clarity when hovering over graph handles and nodes
+* New distance control system - press TRIGGER while hovering over a graph handle or node to open/close
+* New force-pull system - hold TRIGGER while hovering over a graph handle or node to force pull, hold GRAB to force pull & grab
+* General performance and bug fixes
+
+Meta Quest Store build id: "2.2 Code: 13"
+
 ## r7280
 
 Added
