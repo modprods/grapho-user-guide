@@ -69,6 +69,8 @@ In 2024 [ISO 76120 - Graph Query Language (GQL)](https://www.iso.org/standard/76
 
 In 2024 the Grapho service offering was expanded to applied data science including deep learning model creation and training. 
 
+In 2026 the first simulation-based training experience powered by Grapho shipped - (Northern Biosecurity Training)[https://mod.studio/services/production/indigenous-rangers-vr/] - for Australia's Indigenous Rangers programme.
+
 Return to [Table of Contents](#table-of-contents).
 
 # Roadmap
@@ -119,7 +121,7 @@ For PCVR demos, [contact us](#support).
 
 ##### Custom builds
 
-Grapho licensees can sideload their APK onto their XR hardware or use Unreal Engine Editor to build.
+Grapho licensees can sideload their APK onto their XR hardware or build their own app using our Unreal Engine plugins (5.4 or higher).
 
 To sideload 
 
@@ -143,6 +145,7 @@ Grapho XR is configured by default with a "demo" graph database - a small set of
 * Grab the spherical nodes (and the relationship lines connecting nodes) with the GRAB button
 * Use the joystick to [TELEPORT](#teleport)
 * Use [FORCE PULL](#force-pull) to grab nodes at a distance - point at node, press TRIGGER button, flick wrist upwards, release TRIGGER
+* Alternatively, select a node and simply hold down TRIGGER or GRAB to automatically force pull.
 * Switch to another sample database using the [Settings Menu](#settings-menu)
     * Press the SETTINGS button on left controller
     * Select a different Database
@@ -284,8 +287,14 @@ Force pull is a telekinesis-like feature that lets you quickly grab an object re
 
 VR mode:
 * Force pull - select object with the laser point extending from your virtual hand, pull TRIGGER and flick your wrist upward or to the side (like pulling a line on a fishing rod)
+* Settings |  Basic | Force Pull Auto Grab ON (default) enables a simpler mode - simply select object and hold down GRAB or TRIGGER and force pull will start when line completely changes colour.
+
+![force-pull-auto-grab](img/grapho-autogrip.jpeg)
+*Screenshot: a growing dark blue segment of line showing the start of auto grab action*
+
 Desktop mode:
 * Grab a node from a distance pressing G key and it will be force pulled towards the camera automatically
+
 
 ### Bump
 
@@ -362,29 +371,58 @@ Press SETTINGS button on Left Controller
 
 NOTE - Changed settings are saved to your local device. There is currently no Reset Settings feature
 
-![settings](img/grapho-settings-options.png)
+![settings](img/grapho-settings-options.jpeg)
 
-* Restart (button) - restart application
-* Arrange by type (toggle) - Check this to cluster all nodes by their given types (labels in Neo4j speak).
-* Max nodes (spinbox) - limit how many nodes can be displayed at any time
-* API URL (list) - choose from available Grapho API servers
-* Database (list) - choose from available graph databases (per server)
+Basic
+* API URL (list) - choose from available Grapho API servers or add your own.
 * Refresh API (button) - re-run query. Useful for network troubleshooting
-* Mouse Sensitivity - for desktop mode only
-* Movement Speed - for desktop mode only
-* Teleport Delay - increase delay to prevent accidentally use of teleport
+* Database (list) - choose from available graph databases (per server)
+
+![settings](img/grapho-settings-database.jpeg)
+
+* Pin Node On Grab (toggle) - a pinned node is not moved when pulling on a relationship
+* Open Node On Grab (toggle) - show Datapad when grabbed, otherwise use TRIGGER to open manually
+* Mute music (toggle) - disable any music (none in Grapho XR Demo)
+* Teleport Delay (float) - for VR newcomers, a delay can cut down accidental teleporting by brushing the joystick
+* Movement Mode (options) - teleport, sliding or None. None useful for seated experience for VR newcomers 
+
+![settings](img/grapho-settings-advanced.jpeg)
+
+Advanced
+* API Method (options) - all (downloads handles and curated NEXT paths) - best for quick demos and access to large graphs, game (downloads entire graph ) - best for custom applications
+* Max nodes (int) - filter number of nodes for performance and/or usability
+* Arrange by type (toggle) - enable to cluster all nodes by their given types (labels in Neo4j speak) EXPERIMENTAL
+* Camera (Movement) speed - controls speed of Spectator camera PCVR ONLY
+* Handle Max Height (int) - handles float back to this height for accessibility
+* Show Error Log (toggle) - show panel of error messages
+* Reset Settings (button) - reset all Settings to defaults
+* Clear Web Cache (button) - delete all JSON and media assets. Note this will delete files bundled with the installation. Reinstall the app to restore these.
+
+![settings](img/grapho-settings-help.jpeg)
+
+Help
+* Grapho XR documentation (link) - to online help
+* Grapho website (link) - to product page
+* Restart (button) - restart application
+* Build information
 
 Return to [Table of Contents](#table-of-contents).
 
 ## Spectator Mode
 
+![spectatormode](img/projects/daff-spectator-mode.jpg)
+
 ### Windows ###
 
-PCVR builds of Grapho XR include a second "Spectator" virtual camera you can control from the desktop (separate view to what VR user can see). This is a cheap and cheerful way of hosting data exploration sessions with a group.
+PCVR builds of Grapho XR include a third person "Spectator" mode - a virtual camera you can control from the desktop (separate view to what VR user can see). This is a cheap and cheerful way of hosting data exploration sessions with a group.
 
 CONTROL + S - Toggle Spectator Camera
 
 WASD keys to move camera
+
+Settings | Advanced | Camera (Movement) Speed to adjust movement speed.
+
+NOTE visibility of camera to the person in VR is not currently exposed as a Setting. 
 
 ### Meta Quest ###
 
@@ -454,8 +492,9 @@ We provide a public demo grapho-server at [https://demo.grapho.app](https://demo
 
 e.g. Run [Grapho XR Demo](#grapho-xr-demo)
 
-* The default database "demo" displays a handle "Enter the Matrix"
-* Opening this handle reveals a node "The Matrix" from Neo4j's sample Movie Graph.
+* The default database "demo" displays a handle "Enter the Matrix" and "Help" handle
+* "Help" opens after a few seconds to reveal a controls diagram. Licensees can build arbitrarily complex integrations with the Unreal Engine Sequencer system. 
+* Opening "Enter The Matrix" handle reveals a node "The Matrix" from Neo4j's sample Movie Graph.
 * Expanding this node reveals all connected nodes.
 
 See also
@@ -536,6 +575,9 @@ Grapho has been deployed for a variety of use cases across major projects in dif
 * Training & simulation
 * Production knowledge management
 * Narrative design & worldbuilding
+* Public speaking
+
+![pointing](img/grapho-point.jpeg)
 
 ## Sectors
 

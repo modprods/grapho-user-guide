@@ -11,6 +11,22 @@ Change Log for the Grapho data science + storytelling toolkit
 
 # Grapho XR for Meta Quest
 
+## r8183
+
+* Replaced API use of Neo4j id() with elementId() - This is incompatible with previous versions of the server, upgrade to grapho-server 1.8.0 or newer is required
+* Added support for larger graphs
+* Added support for loading Unreal Engine levels from nodes
+* Added option to show/hide error log in Settings | Advanced (hidden by default)
+* Added option to clear the cache in Settings | Advanced
+* Added option to disable/enable auto grip in Settings | Basic
+* Improved asynchronous downloading of assets - there is no longer a 2GB file limit
+* Improved spawning logic from Expand/Collapse?
+* Improved scaling nodes with 2 hands
+* Improved app stability
+* General performance improvements and bug fixes
+
+Meta Quest Store build id: "2.3 Code: 16"
+
 ## r7432
 * Added download progress bars when downloading API data
 * Updated pointer visuals for clarity when hovering over graph handles and nodes

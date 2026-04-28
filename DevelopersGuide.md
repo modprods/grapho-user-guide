@@ -53,6 +53,8 @@ The following properties have specific implementations
 | -----| ---- | ---- | ----------- |
 | colour OR color | string | "#ffffff" | overrides colour style defined in the app | 
 
+![settings](img/projects/daff-knowledge-graph.original.png)
+*Screenshot: Northern Biosecurity Training graph*
 
 <!-- # Console Variables -->
 
@@ -130,37 +132,9 @@ RETURN n, o
 
 2) Run grapho-server container in Docker Desktop
 
-* On your desktop or laptop
-    * Download and install Docker Desktop
-    * Run a Docker container of grapho-server (see separate instructions)
-    * Connect to your running container and update the .env configuration file to match your Neo4j database and LAN IP settings
+See README in grapho-server repo
 
-```
-# Neo4J FQHN
-NEO4J_HOST = "host.docker.internal"
-NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "<INSERT PASSWORD>"
-NEO4J_PORT_HTTP = 7474
-NEO4J_PORT_BOLT = 7687
-# uncomment next line to ignore dynamic db parameter and hardcode this
-#NEO4J_DATABASE = "neo4j"
-PUBLIC_URL = "http://<YOUR SERVER LAN IP>:5042"
-QUERY_LIMIT = 300
-INCLUDE_FIXED_QUERIES = False
-```
-*  
-    * Run the server
-
-```
-pipenv run python api.py
-```
-*  
-    * Confirm the server is running locally by checking PUBLIC_URL in your browser
-
-```
-i.e.
-http://<YOUR SERVER LAN IP>:5042
-```
+https://github.com/modprods/grapho-server
 
 3) Run Grapho XR Demo on Meta Quest HMD
 
