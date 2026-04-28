@@ -33,7 +33,7 @@ Welcome to the user guide for [Grapho](https://grapho.app) - a toolkit for data 
 
 ![one-pager-grapho_b-tiles](img/one-pager-grapho_b-tiles.png)
 
-In 2024 data science is having a moment with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we've evolved - storytelling - and how we tell stories is changing. 
+Data science comes of age with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we've evolved - storytelling - and how we tell stories is changing. 
 
 This toolkit is for anyone anyone working with graph data. It empowers users to create data stories on any platform including spatial computing. It lets you draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho productivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.  
 
@@ -75,7 +75,7 @@ Return to [Table of Contents](#table-of-contents).
 
 # Roadmap
 
-Grapho is available through Mod's SaaS and consulting service.
+Grapho is a tool in ongoing development at Mod by Michela Ledwidge and her team. [Contact us](https://mod.studio) for licensing opportunities.
 
 [Grapho XR Roadmap](https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp)
 
@@ -87,7 +87,9 @@ Grapho XR is a spatial graph visualisation tool and a new way to manage and pres
 
 ![one-pager-grapho-xr-tiles](img/one-pager-grapho-xr-tiles.png)
 
-It's an interactive experience that feels like [Minority Report](https://en.wikipedia.org/wiki/Technologies_in_Minority_Report#Gesture_recognition) meets [60 Minutes](https://en.wikipedia.org/wiki/60_Minutes). Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
+Grapho is designed for spatial storytelling. We provide the mechanics, you provide the data. The demo datasets are just conversation starters for your own custom experiences.
+
+Grapho is an interactive experience that feels like [Minority Report](https://en.wikipedia.org/wiki/Technologies_in_Minority_Report#Gesture_recognition) meets [60 Minutes](https://en.wikipedia.org/wiki/60_Minutes). Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution. 
 
 See also
 * ["Grapho - graph production technology"](https://vimeo.com/776827140) explainer video.
@@ -255,7 +257,7 @@ Meta Quest Touch Controller layout
 
 Passthrough camera support is available on Quest and Vive mobile headsets but not on Windows. 
 
-See [Mixed Reality](#mixed-reality) for PCVR camera support for combining greenscreen live action footage and Grapho visualisation**
+See [Mixed Reality](#mixed-reality) for PCVR camera support for combining greenscreen live action footage and Grapho visualisation.
 
 Toggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.
 
@@ -287,7 +289,7 @@ Force pull is a telekinesis-like feature that lets you quickly grab an object re
 
 VR mode:
 * Force pull - select object with the laser point extending from your virtual hand, pull TRIGGER and flick your wrist upward or to the side (like pulling a line on a fishing rod)
-* Settings |  Basic | Force Pull Auto Grab ON (default) enables a simpler mode - simply select object and hold down GRAB or TRIGGER and force pull will start when line completely changes colour.
+* Settings \|  Basic \| Force Pull Auto Grab ON (default) enables a simpler mode - simply select object and hold down GRAB or TRIGGER and force pull will start when line completely changes colour.
 
 ![force-pull-auto-grab](img/grapho-autogrip.jpeg)
 *Screenshot: a growing dark blue segment of line showing the start of auto grab action*
@@ -361,7 +363,7 @@ The node is unpinned - moving neighbouring parts of the graph will effect its po
 
 #### Bookmark
 
-Not yet implemented. Sorry about that!
+REMOVED FOR UPDATE. Sorry about that!
 
 #### Settings Menu
 
@@ -369,7 +371,7 @@ Not yet implemented. Sorry about that!
 
 Press SETTINGS button on Left Controller
 
-NOTE - Changed settings are saved to your local device. There is currently no Reset Settings feature
+NOTE - Changed settings are automatically saved and persiste between sessions. Use Reset Settings (see Advanced below) to restore defaults.
 
 ![settings](img/grapho-settings-options.jpeg)
 
@@ -401,10 +403,10 @@ Advanced
 ![settings](img/grapho-settings-help.jpeg)
 
 Help
-* Grapho XR documentation (link) - to online help
-* Grapho website (link) - to product page
+* Grapho XR documentation (link) - to [online docs](https://docs.grapho.app) - this site
+* Grapho website (link) - to [product site](https://grapho.app)
 * Restart (button) - restart application
-* Build information
+* Build information - used for support & troubleshooting 
 
 Return to [Table of Contents](#table-of-contents).
 
@@ -578,6 +580,7 @@ Grapho has been deployed for a variety of use cases across major projects in dif
 * Public speaking
 
 ![pointing](img/grapho-point.jpeg)
+*Screenshot: press TRIGGER to point your virtual hand*
 
 ## Sectors
 
