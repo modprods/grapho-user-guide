@@ -1,4 +1,4 @@
-# grapho-user-guide
+# [grapho-user-guide](https://docs.grapho.app) > ChangeLog
 
 ![graphobymod-black](img/graphobymod-black.png)
 
