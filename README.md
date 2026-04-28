@@ -253,7 +253,7 @@ Meta Quest Touch Controller layout
 
 ### Passthrough 
 
-**Passthrough camera support is available on Quest and Vive mobile headsets but not on Windows. 
+Passthrough camera support is available on Quest and Vive mobile headsets but not on Windows. 
 
 See [Mixed Reality](#mixed-reality) for PCVR camera support for combining greenscreen live action footage and Grapho visualisation**
 

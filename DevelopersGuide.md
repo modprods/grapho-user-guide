@@ -134,7 +134,7 @@ RETURN n, o
 
 See README in grapho-server repo
 
-https://github.com/modprods/grapho-server
+[https://github.com/modprods/grapho-server](https://github.com/modprods/grapho-server)
 
 3) Run Grapho XR Demo on Meta Quest HMD
 
