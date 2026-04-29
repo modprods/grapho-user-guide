@@ -1,0 +1,10 @@
+[project]
+name = "grapho-user-guide"
+version = "2.3.0"
+description = "User guide for the Grapho data science + storytelling toolkit"
+readme = "README.md"
+requires-python = ">=3.12.3"
+dependencies = [
+    "jupyterlab>=4.5.6",
+    "nbdev>=3.0.15",
+]
