@@ -2,8 +2,8 @@ project:
   output-dir: _docs
 
 website:
-  title: ""
+  title: "grapho-user-guide"
   site-url: "/"
-  description: ""
+  description: "User guide for the Grapho data science + storytelling toolkit"
   repo-branch: main
   repo-url: ""

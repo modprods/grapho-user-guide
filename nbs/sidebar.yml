@@ -2,5 +2,5 @@ website:
   sidebar:
     contents:
       - index.ipynb
-      - 00_DevelopersGuide.ipynb
+      - 00_DeveloperGuide.ipynb
       - 01_ChangeLog.ipynb

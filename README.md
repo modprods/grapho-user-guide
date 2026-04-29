@@ -37,7 +37,7 @@ sets more accessible and engaging. It brings connections to life.
 
 [Contact us](https://mod.studio/where/) for more information.
 
-See the [Grapho Developers Guide](DevelopersGuide.html) for more
+See the [Grapho Developer Guide](DeveloperGuide.html) for more
 information on preparing data and systems for Grapho.
 
 ## Benefits
@@ -555,7 +555,7 @@ The default Grapho Machine is currently a Linux Debian instance that
 hosts LXC Containers based on the [Academy Software Foundation’s VFX
 Reference Platform](https://vfxplatform.com/).
 
-See the [Grapho Developers Guide](DevelopersGuide.html) for more
+See the [Grapho Developer Guide](DeveloperGuide.html) for more
 information on preparing data and systems for Grapho.
 
 # Online Services
@@ -572,8 +572,8 @@ This provides a thin abstraction layer to help manage vendor lock-in and
 provide data to Grapho applications in a consistent manner as part of a
 manageable pipeline.
 
-See the [Grapho Developers Guide](DevelopersGuide.html#grapho-server)
-for information on how to setup and run your own Grapho services.
+See the [Grapho Developer Guide](DeveloperGuide.html#grapho-server) for
+information on how to setup and run your own Grapho services.
 
 ### demo.grapho.app
 

@@ -8,3 +8,7 @@ dependencies = [
     "jupyterlab>=4.5.6",
     "nbdev>=3.0.15",
 ]
+[tool.nbdev]
+repo = "grapho-user-guide"
+user = "michela"
+branch = "main"

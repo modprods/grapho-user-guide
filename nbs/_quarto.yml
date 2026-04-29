@@ -11,8 +11,9 @@ format:
 
 website:
   twitter-card: true
-  repo-url: "https://github.com/modprods/grapho-user-guide"
   open-graph: true
+  site-url: "https://docs.grapho.app"
+  repo-url: "https://github.com/modprods/grapho-user-guide"
   repo-actions: [issue]
   navbar:
     background: primary
