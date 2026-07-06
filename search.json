@@ -1,0 +1,302 @@
+[
+  {
+    "objectID": "developerguide.html",
+    "href": "developerguide.html",
+    "title": "Developer Guide",
+    "section": "",
+    "text": "graphobymod-black\nDeveloper guide for the Grapho data science + storytelling toolkit",
+    "crumbs": [
+      "Developer Guide"
+    ]
+  },
+  {
+    "objectID": "developerguide.html#node",
+    "href": "developerguide.html#node",
+    "title": "Developer Guide",
+    "section": "node",
+    "text": "node\n\nlabels\nThe following Label types have specific implementations\n\n\n\nLabel\nDescription\n\n\n\n\nHandle\nHandles are core to Grapho and the starting point for your XR graph journey. As such they are rendered differently from all other nodes. Think of a Grapho Handle as a pointer or a bookmark to a particular place in your graph. Use Handles to create deep links into your graph, to support editorial process (handles play nicely with NEXT relationships for curated paths through your data) and help manage clutter. Handles can be saved to your database or generated on the fly from dynamic query logic. See Grapho XR UI documentation\n\n\n\n\n\nproperties\nThe following properties have specific implementations\n\n\n\n\n\n\n\n\n\nname\ntype\ne.g.\ndescription\n\n\n\n\nname\nstr\n“My node”\nused as default label\n\n\ncolour OR color\nstr\n“#ffffff”\noverride colour style\n\n\nvoiceover_override\nbool\ntrue\nif true, voiceover is allowed to interrupt current voiceover, otherwise this is queued\n\n\nvoiceover_url\nstr\nhttps://d1pxeqjdb63hyy.cloudfront.net/media/media/test-ux.ogg\nplays voiceover when node opened. Supports WAV, MP3, and OGG formats\n\n\nimage_url\nstr\nhttps://d1pxeqjdb63hyy.cloudfront.net/media/images/node_end-to-end-testing.original.png\ndisplays image when node opened. Supports JPG, PNG\n\n\nsubtitles_url\nstr\nhttps://mod.studio/documents/64/test-ux.vtt\ndisplays subtitles when node opened - if voiceover_url available. Supports VTT and SRT formats",
+    "crumbs": [
+      "Developer Guide"
+    ]
+  },
+  {
+    "objectID": "developerguide.html#relationship",
+    "href": "developerguide.html#relationship",
+    "title": "Developer Guide",
+    "section": "relationship",
+    "text": "relationship\n\nproperties\n\n\n\n\n\n\n\n\n\nname\ntype\ne.g.\ndescription\n\n\n\n\ncolour OR color\nstring\n“#ffffff”\noverrides colour style defined in the app\n\n\n\n Screenshot: Northern Biosecurity Training graph",
+    "crumbs": [
+      "Developer Guide"
+    ]
+  },
+  {
+    "objectID": "developerguide.html#environment-settings",
+    "href": "developerguide.html#environment-settings",
+    "title": "Developer Guide",
+    "section": "Environment Settings",
+    "text": "Environment Settings\nGrapho Machine tools are typically preset with credentials to your database instances in a .env file.\nWhen building a Grapho Machine from scratch, copy the env.sample file in each component to .env and fill in your real credentials.",
+    "crumbs": [
+      "Developer Guide"
+    ]
+  },
+  {
+    "objectID": "developerguide.html#grapho-server",
+    "href": "developerguide.html#grapho-server",
+    "title": "Developer Guide",
+    "section": "grapho-server",
+    "text": "grapho-server\ngrapho-server is a lightweight reference API server for the GraphoXR spatial browser.\nSource code and documentation is available at https://github.com/modprods/grapho-server\nFeatures\n\nOpenAPI compliant documentation\nREST API endpoints for graph database queries\n\nall - load all editorially curated paths (via their “handles”)\ngame - load a complete graph for offline use\n\nMux database queries (e.g. CYPHER, SQL) with local config\nSupport for running on local desktop, on-premise hosting and cloud platforms\n\nHandles\n“Handles” are the mechanism by which editorially curated paths through your graph data are served to Grapho clients like GraphoXR.\nUse Handles to design, curate and manage your graph data experiences.\nHandles are simply nodes with the label “Handle”. They have special significence and are rendered differently to other nodes.\nUse Handles to * The /all REST API method returns all Handles in the database * By default, selecting a Grapho database in Grapho XR will spawn all Handles as Tron-like disks. * Opening a Handle in a Grapho client will reveal all nodes linked to this Handle. * Handles can be configured to serve any style of data * By default Handles are configured to * Return the path of all nodes connected to me via the relationship NEXT * Return all nodes that are linked to this path by no more than 1 node (i.e. distance = 1)\n\ngrapho-server quickstart\nTo start exploring your own data, try creating a Handle linking to an existing node in your database.\nSet up your own Grapho XR experience from scratch, all you need is a recent Meta Quest headset and the following free resources.\n\nRun Neo4j Desktop\n\n\nOn your desktop or laptop\n\nDownload and install Neo4j Desktop\nCreate and run a new Neo4j database\nOpen the database (with Browser)\nClick Guides\nClick “:guide movie-graph”\nClick “Next”\nClick PLAY icon in the code block\nNote the new “Node labels” and “Relationship types” appearing under “Database Information” (left column)\nCopy the following CYPHER query into the Neo4j Browser CLI\n\n\n// Merge first handle\nMERGE (n:Handle {label:'Enter the Matrix'})\nSET n.name = n.label\nWITH n\nMATCH (o:Movie {title:a'The Matrix'})\nMERGE (n)-[:NEXT]-&gt;(o)\nRETURN n, o\n\n\nClick the RUN icon (blue arrow to the right of prompt)\n\n\n\nRun grapho-server container in Docker Desktop\n\nSee README in grapho-server repo\nhttps://github.com/modprods/grapho-server\n\nRun Grapho XR Demo on Meta Quest HMD\n\n\nOpen Browser\nConfirm you can access grapho-server URL (you may need to give permission for “unsafe” URL)\n\ni.e.\nhttp://&lt;YOUR SERVER LAN IP&gt;:5042\n\nCopy URL\nInstall and run the free Grapho XR Demo from Meta Store\nPress SETTINGS button (three vertical lines) on left controller\nClick “Paste” button under API_ROOT_URL\nSelect your database name under Database\nPress SETTINGS button to close panel\n&lt;the “Enter the Matrix” handle should spawn&gt;\nUse GRAB button to grab handle and flip it over to open\n\nYou now have your own Grapho service equivalent to demo.grapho.app.\nSee /deploy in source code for example configurations when using grapho-server in production.\nSee Properties for how to prepare your graph for use in Grapho.",
+    "crumbs": [
+      "Developer Guide"
+    ]
+  },
+  {
+    "objectID": "changelog.html",
+    "href": "changelog.html",
+    "title": "ChangeLog",
+    "section": "",
+    "text": "graphobymod-black\nChange Log for the Grapho data science + storytelling toolkit",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r8183",
+    "href": "changelog.html#r8183",
+    "title": "ChangeLog",
+    "section": "r8183",
+    "text": "r8183\n\nReplaced API use of Neo4j id() with elementId() - This is incompatible with previous versions of the server, upgrade to grapho-server 1.8.0 or newer is required\nAdded support for larger graphs\nAdded support for loading Unreal Engine levels from nodes\nAdded option to show/hide error log in Settings | Advanced (hidden by default)\nAdded option to clear the cache in Settings | Advanced\nAdded option to disable/enable auto grip in Settings | Basic\nImproved asynchronous downloading of assets - there is no longer a 2GB file limit\nImproved spawning logic from Expand/Collapse?\nImproved scaling nodes with 2 hands\nImproved app stability\nGeneral performance improvements and bug fixes\n\nMeta Quest Store build id: “2.3 Code: 16”",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r7432",
+    "href": "changelog.html#r7432",
+    "title": "ChangeLog",
+    "section": "r7432",
+    "text": "r7432\n\nAdded download progress bars when downloading API data\nUpdated pointer visuals for clarity when hovering over graph handles and nodes\nNew distance control system - press TRIGGER while hovering over a graph handle or graph node to toggle open & close\nNew force pull system - press and hold TRIGGER or GRAB while hovering over a graph handle or graph node to force pull. If holding GRAB you “auto grab” the object once it reaches you. This is a simplified mechanic for triggering force pull along the original “flick” mechanic which is still available.\nGeneral performance and bug fixes\n\nMeta Quest Store build id: “2.2 Code: 13”",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r7280",
+    "href": "changelog.html#r7280",
+    "title": "ChangeLog",
+    "section": "r7280",
+    "text": "r7280\nAdded\n\nAdded thumbstick scrolling to Settings menus\nProcedural layout of graph handles\nSettings | Advanced\n\nReset Settings\nHandle Max Height\n\nSupport for Sequencer controlled handles and nodes - see demo Help handle\n\nFixes\n\nDatapad default UI display of metadata\nGeneral performance improvements and bug fixes\n\nMeta Quest Store build id: “2.1 Code: 11”",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r6966",
+    "href": "changelog.html#r6966",
+    "title": "ChangeLog",
+    "section": "r6966",
+    "text": "r6966\nAdded\n\nSettings &gt; Teleport Enabled toggle - placeholder ahead of more Player Movement options in development\nSettings &gt; API & Database saved to disk for use across sessions (re-install app to restore default settings)\nOffline use - data and media is cached locally and can still be used if API unreachable (along with a warning pop-up shown)\n\nFixes\n\nDatapad details widget - narrower 1st column for readability\nOverall performance improvements - more noticeable with larger graphs\nRelationship grab SFX tweaked",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r6833",
+    "href": "changelog.html#r6833",
+    "title": "ChangeLog",
+    "section": "r6833",
+    "text": "r6833\n\nGrapho XR Demo 0.2.4a\nSettings\nAPI ROOT URL not saved - config for additional servers is not saved\nOtherwise functionally identical",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "changelog.html#r6823",
+    "href": "changelog.html#r6823",
+    "title": "ChangeLog",
+    "section": "r6823",
+    "text": "r6823\nAdded\n\nContextual display of data pad scroll buttons\n\nFixes\n\nMore opaque material on links (User Setting to set opacity on roadmap)",
+    "crumbs": [
+      "ChangeLog"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Grapho User Guide",
+    "section": "",
+    "text": "User guide for the Grapho data science + storytelling toolkit",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#benefits",
+    "href": "index.html#benefits",
+    "title": "Grapho User Guide",
+    "section": "Benefits",
+    "text": "Benefits\n\nHarness public and private domain knowledge\nFine tune your data for AI and ML training\nImprove evaluation of complex systems and processes\nImprove explanability of your insights",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#why-data-science-storytelling",
+    "href": "index.html#why-data-science-storytelling",
+    "title": "Grapho User Guide",
+    "section": "Why “data science + storytelling”?",
+    "text": "Why “data science + storytelling”?\nData is about people. Your people must understand the story your data is telling. As data scientists lean further into the astonishing power of Machine Learning, a one-size-fits-all automated approach is inadequate. In the age of AI, coherant storytelling is more valuable than ever.\n\nData management (leadership)\nData architecture (documentation and mapping)\nData design (analysis and visualisation)\nData engineering (building)\nData operations (maintaining)\nData science (research and development)",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#history",
+    "href": "index.html#history",
+    "title": "Grapho User Guide",
+    "section": "History",
+    "text": "History\nGrapho started life as a spatial knowledge graph interface for a VR documentary A Clever Label released on Steam in 2021 using a Neo4j backend. This was then spun out as a white label tool Grapho XR in 2022 for knowledge graphs. Our first customer was APNIC.\nIn 2024 ISO 76120 - Graph Query Language (GQL) was published - the first database query language standard in 37 years since SQL. This provides a future-proof way of defining data structures and basic operations on property graphs. GQL is largely based on Neo4j’s CYPHER language.\nIn 2024 the Grapho service offering was expanded to applied data science including deep learning model creation and training.\nIn 2026 the first simulation-based training experience powered by Grapho shipped - Northern Biosecurity Training - for Australia’s Indigenous Rangers programme.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#quickstart-for-grapho-xr",
+    "href": "index.html#quickstart-for-grapho-xr",
+    "title": "Grapho User Guide",
+    "section": "Quickstart for Grapho XR",
+    "text": "Quickstart for Grapho XR\n\nInstallation\n\nPCVR\n\nRun Meta Quest Link for Windows\nConnect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)\nUnzip Grapho build ZIP\nRun Grapho.exe direct or use provided BAT file to specify VR or Desktop mode\n\nRunGraphoVR.bat\n\nstart ./Grapho.exe -vr (default)\n\nRunGraphoDesktop.bat\n\nstart ./Grapho.exe -noxrstereo (Desktop is for users without VR)\n\n\n\n\n\nMobile VR\n\nGrapho XR Demo\nDownload the free Grapho XR Demo for Meta Quest from the Meta Store.\nFor PCVR demos, contact us.\n\n\nCustom builds\nGrapho licensees can sideload their APK onto their XR hardware or build their own app using our Unreal Engine plugins (5.4 or higher).\nTo sideload\n\nConnect your Quest to PC USB-C cable\nEnable Developer Mode\nInstall Meta Quest Developer Hub OR SideQuest (unless you already have Android Studio or even just adb installed)\nUnzip your provide Grapho XR build ZIP\nInstall the provided APK to connected HMD\n\nvia Meta Quest Developer Hub - drag APK onto right side of the UI\nvia SideQuest - using “Install APK from file” (right of WIFI icon)\n\n\n\n\n\n\nInduction\nGrapho XR is configured by default with a “demo” graph database - a small set of actors & movies in cross-referenced pop culture\n\nEnable PASSTHROUGH mode with the FACE BUTTON #2 button\nReach out and grab the object labelled “Enter The Matrix” with the GRAB button\nFlip this “Handle” upside down to open the graph\nGrab the spherical nodes (and the relationship lines connecting nodes) with the GRAB button\nUse the joystick to TELEPORT\nUse FORCE PULL to grab nodes at a distance - point at node, press TRIGGER button, flick wrist upwards, release TRIGGER\nAlternatively, select a node and simply hold down TRIGGER or GRAB to automatically force pull.\nSwitch to another sample database using the Settings Menu\n\nPress the SETTINGS button on left controller\nSelect a different Database\nPress the SETTINGS button again to return to the level\n\nSee explainer video showing the Grapho core mechanic on Meta Quest 3 (note - this is a custom build for a client)",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#system-requirements",
+    "href": "index.html#system-requirements",
+    "title": "Grapho User Guide",
+    "section": "System Requirements",
+    "text": "System Requirements\nGrapho XR builds are available for the following platforms.\n\nPCVR\nMobile VR\n\n\nPCVR\n\nWindows 10 or 11\n16 GB RAM or better\nIntel Core i7-3930K/AMD FX 8350 equivalent or better\nNVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better\n1 GB available space\nSupported\n\nQuest 2 / Quest Pro / Quest 3 / Quest 3S\nValve Index\nHTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR\n\n\nNOTE Grapho XR’s “desktop mode” (non-XR) support on Windows is provided for backwards compatibility, accessibility, and testing. We only recommend use of 3D visualisation on 3D displays for professional use given given research findings that 2D visualisation works better on a 2D displays. See Dashboard options for off-the-shelf and custom options.\n\n\nMac OS\n\nComing soon\n\nApple Vision Pro\n\n\n\n\nMobile VR\n\nSupported\n\nQuest 2 / Quest Pro / Quest 3 / Quest 3S\nVive Focus 3 / Vive Elite XR\n\nComing soon\n\nApple Vision Pro\n\n\nControllers are currently required. Hand tracking support on request.\nWe don’t currently recommend hand tracking for precise manipulation of graph data for professional use.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#development-frameworks",
+    "href": "index.html#development-frameworks",
+    "title": "Grapho User Guide",
+    "section": "Development Frameworks",
+    "text": "Development Frameworks\nSee Grapho Machine for details on Grapho service components and development options.\nGrapho XR source code is available to licensees for custom development with the following frameworks\n\nUnreal Engine",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#user-interface",
+    "href": "index.html#user-interface",
+    "title": "Grapho User Guide",
+    "section": "User Interface",
+    "text": "User Interface\nThe Grapho UI has the following key components\n\nHandle\nA Handle is a special type of node that is a convenient handle to a section of a graph that speeds up navigation and helps manage clutter.\nThink of it as a pointer or a bookmark to a particular spot in a the graph.\n\n\n\nhandle\n\n\n\n\nNode\nThe graph is made up of Nodes\n\n\n\nhandle\n\n\n\n\nRelationship\nConnections between nodes are relationships (or links)\n\n\n\nhandle\n\n\n\n\nDatapad\nNodes properties (anything from multimedia to a simple list of text) appear on an attached surface - the data pad.\n\n\n\ndatapad-gif\n\n\n\n\nContext Menu\nContext menus allow you to perform actions on a particular node.\n\n\n\nhandle",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#controls",
+    "href": "index.html#controls",
+    "title": "Grapho User Guide",
+    "section": "Controls",
+    "text": "Controls\nMeta Quest Touch Controller layout\n\n\n\ncontrols\n\n\n\nPassthrough\nPassthrough camera support is available on Quest and Vive mobile headsets but not on Windows.\nSee Mixed Reality for PCVR camera support for combining greenscreen live action footage and Grapho visualisation.\nToggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.\nTIP Use this if real world surroundings make it too hard virtual objects.\n\n\nTeleport\n\n\n\nteleport\n\n\nPush LEFT or RIGHT joystick forward to show reticule and direction arrow on the ground plane. Rotate joystick to change direction of the arrow. This determines what direction you teleport. Release joystick to teleport.\nNOTE Users new to VR can get confused if they trigger teleport by mistake. You can change Settings &gt; Teleport delay to adjust how responsive the joysticks are if this is a problem.\n\n\nGrab\n\n\n\ngrab\n\n\nUse GRIP button to grab object (handle, node, relationship).\n\n\nForce Pull\n\n\n\nforce-pull-gif\n\n\nForce pull is a telekinesis-like feature that lets you quickly grab an object regardless of its distance from you.\n\n\n\nforce-pull\n\n\nVR mode:\n\nForce pull - select object with the laser point extending from your virtual hand, pull TRIGGER and flick your wrist upward or to the side (like pulling a line on a fishing rod)\nSettings | Basic | Force Pull Auto Grab ON (default) enables a simpler mode - simply select object and hold down GRAB or TRIGGER and force pull will start when line completely changes colour.\n\n Screenshot: a growing dark blue segment of line showing the start of auto grab action\nDesktop mode:\n\nGrab a node from a distance pressing G key and it will be force pulled towards the camera automatically\n\n\n\nBump\nUse natural hand movements to move objects out of the way\n\n\nOpen Graph\n\n\n\nhandle-open\n\n\nGrab Handle. Flip Handle upside down to open graph nodes (run a query).\nFlip again to close graph nodes.\n\n\n\nhandle-close\n\n\n\n\nOpen Node\n\n\n\nnode-open\n\n\nPress TRIGGER button to toggle opening and closing of a node to reveal its “Datapad” which shows the properties of a node.\nSettings &gt; Open Datapad on Grab checkbox controls whether this happens automatically on GRAB. It can get annoying sometimes to have this on but useful as a default for new starters.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#context-menu-1",
+    "href": "index.html#context-menu-1",
+    "title": "Grapho User Guide",
+    "section": "Context Menu",
+    "text": "Context Menu\n\n\n\ncontext-menu\n\n\nAdditional functionality is available while holding a node.\nGRAB + &lt;FACE BUTTON #1&gt; opens a floating menu of buttons\nWhile keeping buttons pressed, move hand over the buttons to highlight them\nRelease &lt;FACE BUTTON #1&gt; to select highlight action.\nMove your hand off the menu and release &lt;FACE BUTTON #1&gt; to close menu without doing an action.\n\nExpand\nContext Menu &gt; Expand\nAny neighbouring node not already visible are spawned\n\n\nCollapse\nAny neighbouring node that was previously expanded (but not part of original query) is hidden\n\n\nHide\nThe node is hidden.\nTo reveal node again you currently have to Close Graph and Open Graph again using the Handle\n\n\nHide Unselected\n\n\n\nhide-unselected\n\n\n\n\nPin\nThe node is pinned in place - moving neighbouring parts of the graph will have no effect on it\n\n\nUnpin\nThe node is unpinned - moving neighbouring parts of the graph will effect its position\n\n\nBookmark\nREMOVED FOR UPDATE. Sorry about that!",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#settings-menu",
+    "href": "index.html#settings-menu",
+    "title": "Grapho User Guide",
+    "section": "Settings Menu",
+    "text": "Settings Menu\n\n\n\nsettings\n\n\nPress SETTINGS button on Left Controller\nNOTE - Changed settings are automatically saved and persiste between sessions. Use Reset Settings (see Advanced below) to restore defaults.\n\nBasic\n\n\n\nsettings\n\n\n\nAPI URL (list) - choose from available Grapho API servers or add your own.\nRefresh API (button) - re-run query. Useful for network troubleshooting\nDatabase (list) - choose from available graph databases (per server)\n\n\n\n\nsettings\n\n\n\nPin Node On Grab (toggle) - a pinned node is not moved when pulling on a relationship\nOpen Node On Grab (toggle) - show Datapad when grabbed, otherwise use TRIGGER to open manually\nMute music (toggle) - disable any music (none in Grapho XR Demo)\nTeleport Delay (float) - for VR newcomers, a delay can cut down accidental teleporting by brushing the joystick\nMovement Mode (options) - teleport, sliding or None. None useful for seated experience for VR newcomers\n\n\n\nAdvanced\n\n\n\nsettings\n\n\n\nAPI Method (options) - all (downloads handles and curated NEXT paths) - best for quick demos and access to large graphs, game (downloads entire graph ) - best for custom applications\nMax nodes (int) - filter number of nodes for performance and/or usability\nArrange by type (toggle) - enable to cluster all nodes by their given types (labels in Neo4j speak) EXPERIMENTAL\nCamera (Movement) speed - controls speed of Spectator camera PCVR ONLY\nHandle Max Height (int) - handles float back to this height for accessibility\nShow Error Log (toggle) - show panel of error messages\nReset Settings (button) - reset all Settings to defaults\nClear Web Cache (button) - delete all JSON and media assets. Note this will delete files bundled with the installation. Reinstall the app to restore these.\n\n\n\nHelp\n\n\n\nsettings\n\n\n\nGrapho XR documentation (link) - to online docs - this site\nGrapho website (link) - to product site\nRestart (button) - restart application\nBuild information - used for support & troubleshooting",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#spectator-mode",
+    "href": "index.html#spectator-mode",
+    "title": "Grapho User Guide",
+    "section": "Spectator Mode",
+    "text": "Spectator Mode\n\n\n\nspectatormode\n\n\n\nWindows\nPCVR builds of Grapho XR include a third person “Spectator” mode - a virtual camera you can control from the desktop (separate view to what VR user can see). This is a cheap and cheerful way of hosting data exploration sessions with a group.\nCONTROL + S - Toggle Spectator Camera\nWASD keys to move camera\nSettings | Advanced | Camera (Movement) Speed to adjust movement speed.\nNOTE visibility of camera to the person in VR is not currently exposed as a Setting.\n\n\nMeta Quest\nSpectator mode is not yet available for mobile VR.\nHowever using Meta Quest Developer Hub &gt; Casting &gt; Start Forwarding Camera Input you can now remote operate the Quest virtual camera.\nWARNING - do not attempt to use this while someone is wearing the HMD as this can make them very sick!\n\n\n\nforward-input",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#api",
+    "href": "index.html#api",
+    "title": "Grapho User Guide",
+    "section": "API",
+    "text": "API\ngrapho-server is a lightweight reference API server for the GraphoXR spatial browser.\nSource code and documentation is available on Github\nThis provides a thin abstraction layer to help manage vendor lock-in and provide data to Grapho applications in a consistent manner as part of a manageable pipeline.\nSee the Grapho Developer Guide for information on how to setup and run your own Grapho services.\n\ndemo.grapho.app\nWe provide a public demo grapho-server at https://demo.grapho.app with some sample graphs.\nGrapho XR Demo connects to this server by default.\ne.g. Run Grapho XR Demo\n\nThe default database “demo” displays a handle “Enter the Matrix” and “Help” handle\n“Help” opens after a few seconds to reveal a controls diagram. Licensees can build arbitrarily complex integrations with the Unreal Engine Sequencer system.\nOpening “Enter The Matrix” handle reveals a node “The Matrix” from Neo4j’s sample Movie Graph.\nExpanding this node reveals all connected nodes.\n\nSee also * https://demo.grapho.app/docs",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#dashboard",
+    "href": "index.html#dashboard",
+    "title": "Grapho User Guide",
+    "section": "Dashboard",
+    "text": "Dashboard\nGrapho provides useful screens for managing your data whether these are off-the-shelf integrations or custom built for specific use cases from popular frameworks.\ne.g. Neo4j Neodash Dashboard Builder\n\n\n\ngraphsummitsydney2024-neodash\n\n\nSee our list of Integrations available below and contact us for any new integration requirements you might have.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#integrations",
+    "href": "index.html#integrations",
+    "title": "Grapho User Guide",
+    "section": "Integrations",
+    "text": "Integrations\n\nNeo4j\n\nCommunity Edition - v4.4, v5\nEnterprise Edition - v4.4, v5\nPlugins\n\nBloom\nGDS\nAPOC\n\nNeodash\n\nStreamlit\nGradio\nJupyter\nDjango\n\nWagtail\n\n\nFormats\n\nJSON\nCSV\nVCF\n\nPlatforms\n\nNeo4j Aura\nAmazon AWS\nGoogle Cloud\nMicrosoft Azure\nZohoCRM\nTwitter\nFacebook\nDiscord\n\nGraphics Engines\n\nUnreal Engine\nHoudini\nTouch Designer\nBlender",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#liv",
+    "href": "index.html#liv",
+    "title": "Grapho User Guide",
+    "section": "LIV",
+    "text": "LIV\nGrapho XR PCVR supports the LIV Mixed Reality for real-time live action video integration.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#sectors",
+    "href": "index.html#sectors",
+    "title": "Grapho User Guide",
+    "section": "Sectors",
+    "text": "Sectors\n\nEnterprise knowledge management\nCultural heritage\nMedia & entertainment\nVideo games\nCivil engineering",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#case-studies",
+    "href": "index.html#case-studies",
+    "title": "Grapho User Guide",
+    "section": "Case Studies",
+    "text": "Case Studies\n\nAsia-Pacific Network Information Centre (APNIC)\n\n\n\nAPNIC\n\n\nThe APNIC Visualisation Tool was built with Grapho XR to provide internal staff with a resource for network graph exploration and analysis on desktop and in VR.\n\n\nParramatta Light Rail\n\n\n\nParramatta-Light-Rail\n\n\nGrapho tools were used to model and illustrate the complex interplay between people, processes and technology for the Software Management Plan.\n\n\nJapan Broadcasting Corporation (NHK)\n\n\n\nNHK\n\n\nGrapho was used to design and prototype a digital human agent that communicated in Japanese sign language on broadcast TV.\n\n\nNational Film & Sound Archive (NFSA)\n\n\n\nNFSA\n\n\nGrapho tools are being used to update the service framework for Australia’s national multimedia collection, including a knowledge graph and a topological machine learning pipeline.\n\n\nNeo4j\n\n\n\nNeo4j\n\n\nNeo4j field engineers and marketing managers use Grapho XR to help visitors to their trade show stand get a handle (literally!) on graph databases.\n\n\nA Clever Label\n\n\n\nACL\n\n\nGrapho XR’s first iteration was as the core mechanic behind Mod’s VR investigative documentary, A Clever Label, available on Steam.\n\n\nMod\n\n\n\nMod\n\n\nProperty graphs form a core component of Mod’s studio management and production pipeline - tracking physical and digital IP as well as managing storyworlds and productions.",
+    "crumbs": [
+      "Grapho User Guide"
+    ]
+  }
+]

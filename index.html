@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Grapho User Guide – grapho-user-guide</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3d242d70d41cd9edc5ebe4da1d712dc5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Grapho User Guide – grapho-user-guide">
+<meta property="og:description" content="User guide for the Grapho data science + storytelling toolkit">
+<meta property="og:image" content="/img/graphobymod-black.png">
+<meta property="og:site_name" content="grapho-user-guide">
+<meta property="og:image:height" content="112">
+<meta property="og:image:width" content="720">
+<meta name="twitter:title" content="Grapho User Guide – grapho-user-guide">
+<meta name="twitter:description" content="User guide for the Grapho data science + storytelling toolkit">
+<meta name="twitter:image" content="/img/graphobymod-black.png">
+<meta name="twitter:image-height" content="112">
+<meta name="twitter:image-width" content="720">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">grapho-user-guide</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Grapho User Guide</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Grapho User Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./developerguide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./changelog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ChangeLog</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">Benefits</a></li>
+  <li><a href="#why-data-science-storytelling" id="toc-why-data-science-storytelling" class="nav-link" data-scroll-target="#why-data-science-storytelling">Why “data science + storytelling”?</a></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
+  </ul></li>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link" data-scroll-target="#roadmap">Roadmap</a></li>
+  <li><a href="#grapho-xr" id="toc-grapho-xr" class="nav-link" data-scroll-target="#grapho-xr">Grapho XR</a>
+  <ul class="collapse">
+  <li><a href="#quickstart-for-grapho-xr" id="toc-quickstart-for-grapho-xr" class="nav-link" data-scroll-target="#quickstart-for-grapho-xr">Quickstart for Grapho XR</a>
+  <ul class="collapse">
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#induction" id="toc-induction" class="nav-link" data-scroll-target="#induction">Induction</a></li>
+  </ul></li>
+  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System Requirements</a>
+  <ul class="collapse">
+  <li><a href="#pcvr-1" id="toc-pcvr-1" class="nav-link" data-scroll-target="#pcvr-1">PCVR</a></li>
+  <li><a href="#mac-os" id="toc-mac-os" class="nav-link" data-scroll-target="#mac-os">Mac OS</a></li>
+  <li><a href="#mobile-vr-1" id="toc-mobile-vr-1" class="nav-link" data-scroll-target="#mobile-vr-1">Mobile VR</a></li>
+  </ul></li>
+  <li><a href="#development-frameworks" id="toc-development-frameworks" class="nav-link" data-scroll-target="#development-frameworks">Development Frameworks</a></li>
+  <li><a href="#user-interface" id="toc-user-interface" class="nav-link" data-scroll-target="#user-interface">User Interface</a>
+  <ul class="collapse">
+  <li><a href="#handle" id="toc-handle" class="nav-link" data-scroll-target="#handle">Handle</a></li>
+  <li><a href="#node" id="toc-node" class="nav-link" data-scroll-target="#node">Node</a></li>
+  <li><a href="#relationship" id="toc-relationship" class="nav-link" data-scroll-target="#relationship">Relationship</a></li>
+  <li><a href="#datapad" id="toc-datapad" class="nav-link" data-scroll-target="#datapad">Datapad</a></li>
+  <li><a href="#context-menu" id="toc-context-menu" class="nav-link" data-scroll-target="#context-menu">Context Menu</a></li>
+  </ul></li>
+  <li><a href="#controls" id="toc-controls" class="nav-link" data-scroll-target="#controls">Controls</a>
+  <ul class="collapse">
+  <li><a href="#passthrough" id="toc-passthrough" class="nav-link" data-scroll-target="#passthrough">Passthrough</a></li>
+  <li><a href="#teleport" id="toc-teleport" class="nav-link" data-scroll-target="#teleport">Teleport</a></li>
+  <li><a href="#grab" id="toc-grab" class="nav-link" data-scroll-target="#grab">Grab</a></li>
+  <li><a href="#force-pull" id="toc-force-pull" class="nav-link" data-scroll-target="#force-pull">Force Pull</a></li>
+  <li><a href="#bump" id="toc-bump" class="nav-link" data-scroll-target="#bump">Bump</a></li>
+  <li><a href="#open-graph" id="toc-open-graph" class="nav-link" data-scroll-target="#open-graph">Open Graph</a></li>
+  <li><a href="#open-node" id="toc-open-node" class="nav-link" data-scroll-target="#open-node">Open Node</a></li>
+  </ul></li>
+  <li><a href="#context-menu-1" id="toc-context-menu-1" class="nav-link" data-scroll-target="#context-menu-1">Context Menu</a></li>
+  <li><a href="#settings-menu" id="toc-settings-menu" class="nav-link" data-scroll-target="#settings-menu">Settings Menu</a>
+  <ul class="collapse">
+  <li><a href="#basic" id="toc-basic" class="nav-link" data-scroll-target="#basic">Basic</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
+  <li><a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help">Help</a></li>
+  </ul></li>
+  <li><a href="#spectator-mode" id="toc-spectator-mode" class="nav-link" data-scroll-target="#spectator-mode">Spectator Mode</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  <li><a href="#meta-quest" id="toc-meta-quest" class="nav-link" data-scroll-target="#meta-quest">Meta Quest</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#grapho-machine" id="toc-grapho-machine" class="nav-link" data-scroll-target="#grapho-machine">Grapho Machine</a></li>
+  <li><a href="#online-services" id="toc-online-services" class="nav-link" data-scroll-target="#online-services">Online Services</a>
+  <ul class="collapse">
+  <li><a href="#api" id="toc-api" class="nav-link" data-scroll-target="#api">API</a>
+  <ul class="collapse">
+  <li><a href="#demo.grapho.app" id="toc-demo.grapho.app" class="nav-link" data-scroll-target="#demo.grapho.app">demo.grapho.app</a></li>
+  </ul></li>
+  <li><a href="#dashboard" id="toc-dashboard" class="nav-link" data-scroll-target="#dashboard">Dashboard</a></li>
+  <li><a href="#integrations" id="toc-integrations" class="nav-link" data-scroll-target="#integrations">Integrations</a></li>
+  </ul></li>
+  <li><a href="#mixed-reality" id="toc-mixed-reality" class="nav-link" data-scroll-target="#mixed-reality">Mixed Reality</a>
+  <ul class="collapse">
+  <li><a href="#liv" id="toc-liv" class="nav-link" data-scroll-target="#liv">LIV</a></li>
+  </ul></li>
+  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use Cases</a>
+  <ul class="collapse">
+  <li><a href="#sectors" id="toc-sectors" class="nav-link" data-scroll-target="#sectors">Sectors</a></li>
+  <li><a href="#case-studies" id="toc-case-studies" class="nav-link" data-scroll-target="#case-studies">Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#asia-pacific-network-information-centre-apnic" id="toc-asia-pacific-network-information-centre-apnic" class="nav-link" data-scroll-target="#asia-pacific-network-information-centre-apnic">Asia-Pacific Network Information Centre (APNIC)</a></li>
+  <li><a href="#parramatta-light-rail" id="toc-parramatta-light-rail" class="nav-link" data-scroll-target="#parramatta-light-rail">Parramatta Light Rail</a></li>
+  <li><a href="#japan-broadcasting-corporation-nhk" id="toc-japan-broadcasting-corporation-nhk" class="nav-link" data-scroll-target="#japan-broadcasting-corporation-nhk">Japan Broadcasting Corporation (NHK)</a></li>
+  <li><a href="#national-film-sound-archive-nfsa" id="toc-national-film-sound-archive-nfsa" class="nav-link" data-scroll-target="#national-film-sound-archive-nfsa">National Film &amp; Sound Archive (NFSA)</a></li>
+  <li><a href="#neo4j" id="toc-neo4j" class="nav-link" data-scroll-target="#neo4j">Neo4j</a></li>
+  <li><a href="#a-clever-label" id="toc-a-clever-label" class="nav-link" data-scroll-target="#a-clever-label">A Clever Label</a></li>
+  <li><a href="#mod" id="toc-mod" class="nav-link" data-scroll-target="#mod">Mod</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.html.md"><i class="bi bi-file-code"></i>CommonMark</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Grapho User Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<p><img src="img/graphobymod-black.png" class="img-fluid"></p>
+<p>User guide for the Grapho data science + storytelling toolkit</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Welcome to the user guide for <a href="https://grapho.app">Grapho</a> - a toolkit for data science + storytelling.</p>
+<ul>
+<li>standard interaction mechanics across different data sets and applications</li>
+<li>easy-to-use desktop, mobile and XR features</li>
+<li>convenient hosting options</li>
+<li>developer-friendly integrations with Neo4j, python and Unreal Engine</li>
+</ul>
+<p><img src="img/one-pager-grapho_b-tiles.png" class="img-fluid"></p>
+<p>Data science comes of age with the explosion in generative AI fuelled by deep learning techniques and vast data collections. But the reality is that for all the technical advances, it comes back to humans. How are we collecting data? Why are we collecting it? What are our motivations for using it? How do we communicate? Getting to grips with modern data still requires that ancient skillset we’ve evolved - storytelling - and how we tell stories is changing.</p>
+<p>This toolkit is for anyone anyone working with graph data. It empowers users to create data stories on any platform including spatial computing. It lets you draw connections in real-time within immersive virtual worlds. Explore and query graphs using parameters relevant to you. Grapho productivity tools make taking a deep dive into complex data sets more accessible and engaging. It brings connections to life.</p>
+<p><a href="https://mod.studio/where/">Contact us</a> for more information.</p>
+<p>See the <a href="DeveloperGuide.html">Grapho Developer Guide</a> for more information on preparing data and systems for Grapho.</p>
+<section id="benefits" class="level2">
+<h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
+<ul>
+<li>Harness public and private domain knowledge</li>
+<li>Fine tune your data for AI and ML training</li>
+<li>Improve evaluation of complex systems and processes</li>
+<li>Improve explanability of your insights</li>
+</ul>
+</section>
+<section id="why-data-science-storytelling" class="level2">
+<h2 class="anchored" data-anchor-id="why-data-science-storytelling">Why “data science + storytelling”?</h2>
+<p>Data is about people. Your people must understand the story your data is telling. As data scientists lean further into the astonishing power of Machine Learning, a one-size-fits-all automated approach is inadequate. In the age of AI, coherant storytelling is more valuable than ever.</p>
+<ul>
+<li>Data management (leadership)</li>
+<li>Data architecture (documentation and mapping)</li>
+<li>Data design (analysis and visualisation)</li>
+<li>Data engineering (building)</li>
+<li>Data operations (maintaining)</li>
+<li>Data science (research and development)</li>
+</ul>
+</section>
+<section id="history" class="level2">
+<h2 class="anchored" data-anchor-id="history">History</h2>
+<p>Grapho started life as a spatial knowledge graph interface for a VR documentary <a href="https://acleverlabel.com">A Clever Label</a> released on Steam in 2021 using a Neo4j backend. This was then spun out as a white label tool <a href="#Grapho-XR">Grapho XR</a> in 2022 for knowledge graphs. Our first customer was <a href="https://www.apnic.net/">APNIC</a>.</p>
+<p>In 2024 <a href="https://www.iso.org/standard/76120.html">ISO 76120 - Graph Query Language (GQL)</a> was published - the first database query language standard in 37 years since SQL. This provides a future-proof way of defining data structures and basic operations on property graphs. GQL is largely based on Neo4j’s <a href="https://neo4j.com/product/cypher-graph-query-language">CYPHER</a> language.</p>
+<p>In 2024 the Grapho service offering was expanded to applied data science including deep learning model creation and training.</p>
+<p>In 2026 the first simulation-based training experience powered by Grapho shipped - <a href="https://mod.studio/services/production/indigenous-rangers-vr/">Northern Biosecurity Training</a> - for Australia’s Indigenous Rangers programme.</p>
+</section>
+</section>
+<section id="roadmap" class="level1">
+<h1>Roadmap</h1>
+<p>Grapho is a tool in ongoing development at Mod by Michela Ledwidge and her team. <a href="https://mod.studio">Contact us</a> for licensing opportunities.</p>
+<p><a href="https://trello.com/b/aIg9JRxM/grapho-roadmap-graphoapp">Grapho XR Roadmap</a></p>
+</section>
+<section id="grapho-xr" class="level1">
+<h1>Grapho XR</h1>
+<p>Grapho XR is a spatial graph visualisation tool and a new way to manage and present graph data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/one-pager-grapho-xr-tiles.png" class="img-fluid figure-img"></p>
+<figcaption>one-pager-grapho-xr-tiles</figcaption>
+</figure>
+</div>
+<p>Grapho is designed for spatial storytelling. We provide the mechanics, you provide the data. The demo datasets are just conversation starters for your own custom experiences.</p>
+<p>Grapho is an interactive experience that feels like <a href="https://en.wikipedia.org/wiki/Technologies_in_Minority_Report#Gesture_recognition">Minority Report</a> meets <a href="https://en.wikipedia.org/wiki/60_Minutes">60 Minutes</a>. Grapho provides flexibility to switch between data sets and between visual themes, ensuring the look is right for your audience. Display and take control of your data. Share knowledge in a hands-on intuitive way. Use it on-set as an interactive in-camera VFX solution.</p>
+<p>See also</p>
+<ul>
+<li><a href="https://vimeo.com/776827140">“Grapho - graph production technology”</a> explainer video.</li>
+<li>Our SIGGRAPH2022 paper <a href="https://dl.acm.org/doi/fullHtml/10.1145/3532834.3536206">A Clever Label: Multi-sensory VR data visualization for art, productivity and communication</a></li>
+<li><a href="https://www.flickr.com/photos/modproductions/albums/72177720306315648">Screenshots on Flickr</a></li>
+</ul>
+<section id="quickstart-for-grapho-xr" class="level2">
+<h2 class="anchored" data-anchor-id="quickstart-for-grapho-xr">Quickstart for Grapho XR</h2>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<section id="pcvr" class="level4">
+<h4 class="anchored" data-anchor-id="pcvr">PCVR</h4>
+<ul>
+<li>Run Meta Quest Link for Windows</li>
+<li>Connect your Quest to PC via OculusLink (USB-C cable) or AirLink (Wifi gen6 only)</li>
+<li>Unzip Grapho build ZIP</li>
+<li>Run Grapho.exe direct or use provided BAT file to specify VR or Desktop mode
+<ul>
+<li>RunGraphoVR.bat
+<ul>
+<li><code>start ./Grapho.exe -vr</code> (default)</li>
+</ul></li>
+<li>RunGraphoDesktop.bat
+<ul>
+<li><code>start ./Grapho.exe -noxrstereo</code> (Desktop is for users without VR)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="mobile-vr" class="level4">
+<h4 class="anchored" data-anchor-id="mobile-vr">Mobile VR</h4>
+<section id="grapho-xr-demo" class="level5">
+<h5 class="anchored" data-anchor-id="grapho-xr-demo">Grapho XR Demo</h5>
+<p>Download the free <a href="https://www.meta.com/en-gb/experiences/grapho-xr-demo/9765613903465624">Grapho XR Demo for Meta Quest</a> from the Meta Store.</p>
+<p>For PCVR demos, <a href="#support">contact us</a>.</p>
+</section>
+<section id="custom-builds" class="level5">
+<h5 class="anchored" data-anchor-id="custom-builds">Custom builds</h5>
+<p>Grapho licensees can sideload their APK onto their XR hardware or build their own app using our Unreal Engine plugins (5.4 or higher).</p>
+<p>To sideload</p>
+<ul>
+<li>Connect your Quest to PC USB-C cable</li>
+<li><a href="https://developer.oculus.com/documentation/native/android/mobile-device-setup/">Enable Developer Mode</a></li>
+<li>Install <a href="https://developers.meta.com/horizon/documentation/unity/ts-odh-getting-started">Meta Quest Developer Hub</a> OR <a href="https://sidequestvr.com/">SideQuest</a> (unless you already have Android Studio or even just adb installed)</li>
+<li>Unzip your provide Grapho XR build ZIP</li>
+<li>Install the provided APK to connected HMD
+<ul>
+<li>via Meta Quest Developer Hub - drag APK onto right side of the UI</li>
+<li>via SideQuest - using “Install APK from file” (right of WIFI icon)</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="induction" class="level3">
+<h3 class="anchored" data-anchor-id="induction">Induction</h3>
+<p>Grapho XR is configured by default with a “demo” graph database - a small set of actors &amp; movies in cross-referenced pop culture</p>
+<ul>
+<li>Enable <a href="#passthrough">PASSTHROUGH</a> mode with the FACE BUTTON #2 button</li>
+<li>Reach out and grab the object labelled “Enter The Matrix” with the <a href="#controls">GRAB</a> button</li>
+<li>Flip this “Handle” upside down to <a href="#open-graph">open the graph</a></li>
+<li>Grab the spherical nodes (and the relationship lines connecting nodes) with the GRAB button</li>
+<li>Use the joystick to <a href="#teleport">TELEPORT</a></li>
+<li>Use <a href="#force-pull">FORCE PULL</a> to grab nodes at a distance - point at node, press TRIGGER button, flick wrist upwards, release TRIGGER</li>
+<li>Alternatively, select a node and simply hold down TRIGGER or GRAB to automatically force pull.</li>
+<li>Switch to another sample database using the <a href="#settings-menu">Settings Menu</a>
+<ul>
+<li>Press the SETTINGS button on left controller</li>
+<li>Select a different Database</li>
+<li>Press the SETTINGS button again to return to the level</li>
+</ul></li>
+<li>See <a href="https://vimeo.com/1025517678/2b7f1b0133?ts=0&amp;share=copy">explainer video</a> showing the Grapho core mechanic on Meta Quest 3 (note - this is a custom build for a client)</li>
+</ul>
+</section>
+</section>
+<section id="system-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="system-requirements">System Requirements</h2>
+<p>Grapho XR builds are available for the following platforms.</p>
+<ul>
+<li>PCVR</li>
+<li>Mobile VR</li>
+</ul>
+<section id="pcvr-1" class="level3">
+<h3 class="anchored" data-anchor-id="pcvr-1">PCVR</h3>
+<ul>
+<li>Windows 10 or 11</li>
+<li>16 GB RAM or better</li>
+<li>Intel Core i7-3930K/AMD FX 8350 equivalent or better</li>
+<li>NVIDIA GeForce GTX 970, AMD Radeon R9 290 equivalent or better</li>
+<li>1 GB available space</li>
+<li>Supported
+<ul>
+<li>Quest 2 / Quest Pro / Quest 3 / Quest 3S</li>
+<li>Valve Index</li>
+<li>HTC Vive / Vive Pro / Vive Pro 2 / Vive Focus 3 / Vive Elite XR</li>
+</ul></li>
+</ul>
+<p>NOTE Grapho XR’s “desktop mode” (non-XR) support on Windows is provided for backwards compatibility, accessibility, and testing. We only recommend use of 3D visualisation on 3D displays for professional use given given research findings that 2D visualisation works better on a 2D displays. See <a href="#dashboard">Dashboard</a> options for off-the-shelf and custom options.</p>
+</section>
+<section id="mac-os" class="level3">
+<h3 class="anchored" data-anchor-id="mac-os">Mac OS</h3>
+<ul>
+<li>Coming soon
+<ul>
+<li>Apple Vision Pro</li>
+</ul></li>
+</ul>
+</section>
+<section id="mobile-vr-1" class="level3">
+<h3 class="anchored" data-anchor-id="mobile-vr-1">Mobile VR</h3>
+<ul>
+<li>Supported
+<ul>
+<li>Quest 2 / Quest Pro / Quest 3 / Quest 3S</li>
+<li>Vive Focus 3 / Vive Elite XR</li>
+</ul></li>
+<li>Coming soon
+<ul>
+<li>Apple Vision Pro</li>
+</ul></li>
+</ul>
+<p>Controllers are currently required. Hand tracking support on request.</p>
+<p>We don’t currently recommend hand tracking for precise manipulation of graph data for professional use.</p>
+</section>
+</section>
+<section id="development-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="development-frameworks">Development Frameworks</h2>
+<p>See <a href="#grapho-machine">Grapho Machine</a> for details on Grapho service components and development options.</p>
+<p>Grapho XR source code is available to licensees for custom development with the following frameworks</p>
+<ul>
+<li><a href="https://unrealengine.com/">Unreal Engine</a></li>
+</ul>
+</section>
+<section id="user-interface" class="level2">
+<h2 class="anchored" data-anchor-id="user-interface">User Interface</h2>
+<p>The Grapho UI has the following key components</p>
+<section id="handle" class="level3">
+<h3 class="anchored" data-anchor-id="handle">Handle</h3>
+<p>A Handle is a special type of node that is a convenient handle to a section of a graph that speeds up navigation and helps manage clutter.</p>
+<p>Think of it as a pointer or a bookmark to a particular spot in a the graph.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/what-is-a-handle.png" class="img-fluid figure-img"></p>
+<figcaption>handle</figcaption>
+</figure>
+</div>
+</section>
+<section id="node" class="level3">
+<h3 class="anchored" data-anchor-id="node">Node</h3>
+<p>The graph is made up of Nodes</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/what-is-a-node.png" class="img-fluid figure-img"></p>
+<figcaption>handle</figcaption>
+</figure>
+</div>
+</section>
+<section id="relationship" class="level3">
+<h3 class="anchored" data-anchor-id="relationship">Relationship</h3>
+<p>Connections between nodes are relationships (or links)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/what-is-a-relationship.png" class="img-fluid figure-img"></p>
+<figcaption>handle</figcaption>
+</figure>
+</div>
+</section>
+<section id="datapad" class="level3">
+<h3 class="anchored" data-anchor-id="datapad">Datapad</h3>
+<p>Nodes properties (anything from multimedia to a simple list of text) appear on an attached surface - the data pad.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="gif/scroll-datapad-small.gif" class="img-fluid figure-img"></p>
+<figcaption>datapad-gif</figcaption>
+</figure>
+</div>
+</section>
+<section id="context-menu" class="level3">
+<h3 class="anchored" data-anchor-id="context-menu">Context Menu</h3>
+<p>Context menus allow you to perform actions on a particular node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/what-is-a-context-menu.png" class="img-fluid figure-img"></p>
+<figcaption>handle</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="controls" class="level2">
+<h2 class="anchored" data-anchor-id="controls">Controls</h2>
+<p>Meta Quest Touch Controller layout</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-controls-quest.png" class="img-fluid figure-img"></p>
+<figcaption>controls</figcaption>
+</figure>
+</div>
+<section id="passthrough" class="level3">
+<h3 class="anchored" data-anchor-id="passthrough">Passthrough</h3>
+<p>Passthrough camera support is available on Quest and Vive mobile headsets but not on Windows.</p>
+<p>See <a href="#mixed-reality">Mixed Reality</a> for PCVR camera support for combining greenscreen live action footage and Grapho visualisation.</p>
+<p>Toggle FACE BUTTON #2 button to switch between virtual environment and passthrough (see the real world through the onboard cameras). Passthrough (sometimes called Mixed Reality) can be great for new users unfamiliar with VR.</p>
+<p>TIP Use this if real world surroundings make it too hard virtual objects.</p>
+</section>
+<section id="teleport" class="level3">
+<h3 class="anchored" data-anchor-id="teleport">Teleport</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-teleport.png" class="img-fluid figure-img"></p>
+<figcaption>teleport</figcaption>
+</figure>
+</div>
+<p>Push LEFT or RIGHT joystick forward to show reticule and direction arrow on the ground plane. Rotate joystick to change direction of the arrow. This determines what direction you teleport. Release joystick to teleport.</p>
+<p>NOTE Users new to VR can get confused if they trigger teleport by mistake. You can change Settings &gt; Teleport delay to adjust how responsive the joysticks are if this is a problem.</p>
+</section>
+<section id="grab" class="level3">
+<h3 class="anchored" data-anchor-id="grab">Grab</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-grab-button.png" class="img-fluid figure-img"></p>
+<figcaption>grab</figcaption>
+</figure>
+</div>
+<p>Use GRIP button to grab object (handle, node, relationship).</p>
+</section>
+<section id="force-pull" class="level3">
+<h3 class="anchored" data-anchor-id="force-pull">Force Pull</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="gif/force-grab-alpha-small.gif" class="img-fluid figure-img"></p>
+<figcaption>force-pull-gif</figcaption>
+</figure>
+</div>
+<p>Force pull is a telekinesis-like feature that lets you quickly grab an object regardless of its distance from you.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-force-pull.png" class="img-fluid figure-img"></p>
+<figcaption>force-pull</figcaption>
+</figure>
+</div>
+<p>VR mode:</p>
+<ul>
+<li>Force pull - select object with the laser point extending from your virtual hand, pull TRIGGER and flick your wrist upward or to the side (like pulling a line on a fishing rod)</li>
+<li>Settings | Basic | Force Pull Auto Grab ON (default) enables a simpler mode - simply select object and hold down GRAB or TRIGGER and force pull will start when line completely changes colour.</li>
+</ul>
+<p><img src="img/grapho-autogrip.jpeg" class="img-fluid" alt="force-pull-auto-grab"> <em>Screenshot: a growing dark blue segment of line showing the start of auto grab action</em></p>
+<p>Desktop mode:</p>
+<ul>
+<li>Grab a node from a distance pressing G key and it will be force pulled towards the camera automatically</li>
+</ul>
+</section>
+<section id="bump" class="level3">
+<h3 class="anchored" data-anchor-id="bump">Bump</h3>
+<p>Use natural hand movements to move objects out of the way</p>
+</section>
+<section id="open-graph" class="level3">
+<h3 class="anchored" data-anchor-id="open-graph">Open Graph</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-handle-open.png" class="img-fluid figure-img"></p>
+<figcaption>handle-open</figcaption>
+</figure>
+</div>
+<p>Grab Handle. Flip Handle upside down to open graph nodes (run a query).</p>
+<p>Flip again to close graph nodes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-handle-close.png" class="img-fluid figure-img"></p>
+<figcaption>handle-close</figcaption>
+</figure>
+</div>
+</section>
+<section id="open-node" class="level3">
+<h3 class="anchored" data-anchor-id="open-node">Open Node</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-datapad.png" class="img-fluid figure-img"></p>
+<figcaption>node-open</figcaption>
+</figure>
+</div>
+<p>Press TRIGGER button to toggle opening and closing of a node to reveal its “Datapad” which shows the properties of a node.</p>
+<p>Settings &gt; Open Datapad on Grab checkbox controls whether this happens automatically on GRAB. It can get annoying sometimes to have this on but useful as a default for new starters.</p>
+</section>
+</section>
+<section id="context-menu-1" class="level2">
+<h2 class="anchored" data-anchor-id="context-menu-1">Context Menu</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-context-menu.png" class="img-fluid figure-img"></p>
+<figcaption>context-menu</figcaption>
+</figure>
+</div>
+<p>Additional functionality is available while holding a node.</p>
+<p>GRAB + &lt;FACE BUTTON #1&gt; opens a floating menu of buttons</p>
+<p>While keeping buttons pressed, move hand over the buttons to highlight them</p>
+<p>Release &lt;FACE BUTTON #1&gt; to select highlight action.</p>
+<p>Move your hand off the menu and release &lt;FACE BUTTON #1&gt; to close menu without doing an action.</p>
+<section id="expand" class="level4">
+<h4 class="anchored" data-anchor-id="expand">Expand</h4>
+<p>Context Menu &gt; Expand</p>
+<p>Any neighbouring node not already visible are spawned</p>
+</section>
+<section id="collapse" class="level4">
+<h4 class="anchored" data-anchor-id="collapse">Collapse</h4>
+<p>Any neighbouring node that was previously expanded (but not part of original query) is hidden</p>
+</section>
+<section id="hide" class="level4">
+<h4 class="anchored" data-anchor-id="hide">Hide</h4>
+<p>The node is hidden.</p>
+<p>To reveal node again you currently have to Close Graph and Open Graph again using the Handle</p>
+</section>
+<section id="hide-unselected" class="level4">
+<h4 class="anchored" data-anchor-id="hide-unselected">Hide Unselected</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-hide-unselected.png" class="img-fluid figure-img"></p>
+<figcaption>hide-unselected</figcaption>
+</figure>
+</div>
+</section>
+<section id="pin" class="level4">
+<h4 class="anchored" data-anchor-id="pin">Pin</h4>
+<p>The node is pinned in place - moving neighbouring parts of the graph will have no effect on it</p>
+</section>
+<section id="unpin" class="level4">
+<h4 class="anchored" data-anchor-id="unpin">Unpin</h4>
+<p>The node is unpinned - moving neighbouring parts of the graph will effect its position</p>
+</section>
+<section id="bookmark" class="level4">
+<h4 class="anchored" data-anchor-id="bookmark">Bookmark</h4>
+<p>REMOVED FOR UPDATE. Sorry about that!</p>
+</section>
+</section>
+<section id="settings-menu" class="level2">
+<h2 class="anchored" data-anchor-id="settings-menu">Settings Menu</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-settings.png" class="img-fluid figure-img"></p>
+<figcaption>settings</figcaption>
+</figure>
+</div>
+<p>Press SETTINGS button on Left Controller</p>
+<p>NOTE - Changed settings are automatically saved and persiste between sessions. Use Reset Settings (see Advanced below) to restore defaults.</p>
+<section id="basic" class="level3">
+<h3 class="anchored" data-anchor-id="basic">Basic</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-settings-options.jpeg" class="img-fluid figure-img"></p>
+<figcaption>settings</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>API URL</strong> (list) - choose from available Grapho API servers or add your own.</li>
+<li><strong>Refresh API</strong> (button) - re-run query. Useful for network troubleshooting</li>
+<li><strong>Database</strong> (list) - choose from available graph databases (per server)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-settings-database.jpeg" class="img-fluid figure-img"></p>
+<figcaption>settings</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Pin Node On Grab</strong> (toggle) - a pinned node is not moved when pulling on a relationship</li>
+<li><strong>Open Node On Grab</strong> (toggle) - show Datapad when grabbed, otherwise use TRIGGER to open manually</li>
+<li><strong>Mute music</strong> (toggle) - disable any music (none in Grapho XR Demo)</li>
+<li><strong>Teleport Delay</strong> (float) - for VR newcomers, a delay can cut down accidental teleporting by brushing the joystick</li>
+<li><strong>Movement Mode</strong> (options) - teleport, sliding or None. None useful for seated experience for VR newcomers</li>
+</ul>
+</section>
+<section id="advanced" class="level3">
+<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-settings-advanced.jpeg" class="img-fluid figure-img"></p>
+<figcaption>settings</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>API Method</strong> (options) - all (downloads handles and curated NEXT paths) - best for quick demos and access to large graphs, game (downloads entire graph ) - best for custom applications</li>
+<li><strong>Max nodes</strong> (int) - filter number of nodes for performance and/or usability</li>
+<li><strong>Arrange by type</strong> (toggle) - enable to cluster all nodes by their given types (labels in Neo4j speak) EXPERIMENTAL</li>
+<li><strong>Camera (Movement) speed</strong> - controls speed of Spectator camera PCVR ONLY</li>
+<li><strong>Handle Max Height</strong> (int) - handles float back to this height for accessibility</li>
+<li><strong>Show Error Log</strong> (toggle) - show panel of error messages</li>
+<li><strong>Reset Settings</strong> (button) - reset all Settings to defaults</li>
+<li><strong>Clear Web Cach</strong>e (button) - delete all JSON and media assets. Note this will delete files bundled with the installation. Reinstall the app to restore these.</li>
+</ul>
+</section>
+<section id="help" class="level3">
+<h3 class="anchored" data-anchor-id="help">Help</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/grapho-settings-help.jpeg" class="img-fluid figure-img"></p>
+<figcaption>settings</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Grapho XR documentation</strong> (link) - to <a href="https://docs.grapho.app">online docs</a> - this site</li>
+<li><strong>Grapho website</strong> (link) - to <a href="https://grapho.app">product site</a></li>
+<li><strong>Restart</strong> (button) - restart application</li>
+<li><strong>Build information</strong> - used for support &amp; troubleshooting</li>
+</ul>
+</section>
+</section>
+<section id="spectator-mode" class="level2">
+<h2 class="anchored" data-anchor-id="spectator-mode">Spectator Mode</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/daff-spectator-mode.jpg" class="img-fluid figure-img"></p>
+<figcaption>spectatormode</figcaption>
+</figure>
+</div>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>PCVR builds of Grapho XR include a third person “Spectator” mode - a virtual camera you can control from the desktop (separate view to what VR user can see). This is a cheap and cheerful way of hosting data exploration sessions with a group.</p>
+<p>CONTROL + S - Toggle Spectator Camera</p>
+<p>WASD keys to move camera</p>
+<p>Settings | Advanced | Camera (Movement) Speed to adjust movement speed.</p>
+<p>NOTE visibility of camera to the person in VR is not currently exposed as a Setting.</p>
+</section>
+<section id="meta-quest" class="level3">
+<h3 class="anchored" data-anchor-id="meta-quest">Meta Quest</h3>
+<p>Spectator mode is not yet available for mobile VR.</p>
+<p>However using <a href="https://developer.oculus.com/meta-quest-developer-hub/">Meta Quest Developer Hub</a> &gt; Casting &gt; Start Forwarding Camera Input you can now remote operate the Quest virtual camera.</p>
+<p>WARNING - do not attempt to use this while someone is wearing the HMD as this can make them very sick!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/forward-input.png" class="img-fluid figure-img"></p>
+<figcaption>forward-input</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="grapho-machine" class="level1">
+<h1>Grapho Machine</h1>
+<p>Grapho Machines (GMs) are re-distributable applications and online services. They are how we build, deploy, distribute and operate services in a standard way. There is no one-size fits-all approach that will work for all use cases so GMs provide an abstraction layer for delivering services across a variety of platforms as required.</p>
+<p>GMs include</p>
+<ul>
+<li>functionality - instances of any bundled applications and services</li>
+<li>data - preset data, instance-generated data</li>
+</ul>
+<p>GMs support a variety of container and virtual machine formats for use on your local device, on-premises hosting or on cloud platforms.</p>
+<p>We use packer and terragrunt to maintain <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code">Infrastructure as Code</a> definitions of all Grapho components to automated creation of Grapho Machine instances and GM variants for multiple platforms as required.</p>
+<p>e.g.&nbsp;a Grapho Machine might be created as * AMI for use on AWS * VHD for use on a local Windows machine * PVM for use on a local Mac machine</p>
+<p>Supported:</p>
+<ul>
+<li>Virtual Machine Image Formats
+<ul>
+<li>AMI</li>
+<li>VHD</li>
+</ul></li>
+<li>Containers
+<ul>
+<li>Linux Containers (LXC)</li>
+<li>Docker</li>
+<li>Virtual Box</li>
+<li>VMWare</li>
+</ul></li>
+</ul>
+<p><a href="https://mod.studio/where/">Contact us</a> to discuss how we can accomodate any new infrastructure requirements not on this list.</p>
+<p>The default Grapho Machine is currently a Linux Debian instance that hosts LXC Containers based on the <a href="https://vfxplatform.com/">Academy Software Foundation’s VFX Reference Platform</a>.</p>
+<p>See the <a href="DeveloperGuide.html">Grapho Developer Guide</a> for more information on preparing data and systems for Grapho.</p>
+</section>
+<section id="online-services" class="level1">
+<h1>Online Services</h1>
+<section id="api" class="level2">
+<h2 class="anchored" data-anchor-id="api">API</h2>
+<p>grapho-server is a lightweight reference API server for the <a href="#grapho-xr">GraphoXR</a> spatial browser.</p>
+<p>Source code and documentation is available on <a href="https://github.com/modprods/grapho-server">Github</a></p>
+<p>This provides a thin abstraction layer to help manage vendor lock-in and provide data to Grapho applications in a consistent manner as part of a manageable pipeline.</p>
+<p>See the <a href="DeveloperGuide.html#grapho-server">Grapho Developer Guide</a> for information on how to setup and run your own Grapho services.</p>
+<section id="demo.grapho.app" class="level3">
+<h3 class="anchored" data-anchor-id="demo.grapho.app">demo.grapho.app</h3>
+<p>We provide a public demo grapho-server at <a href="https://demo.grapho.app">https://demo.grapho.app</a> with some sample graphs.</p>
+<p><a href="#grapho-xr-demo">Grapho XR Demo</a> connects to this server by default.</p>
+<p>e.g.&nbsp;Run <a href="#grapho-xr-demo">Grapho XR Demo</a></p>
+<ul>
+<li>The default database “demo” displays a handle “Enter the Matrix” and “Help” handle</li>
+<li>“Help” opens after a few seconds to reveal a controls diagram. Licensees can build arbitrarily complex integrations with the Unreal Engine Sequencer system.</li>
+<li>Opening “Enter The Matrix” handle reveals a node “The Matrix” from Neo4j’s sample Movie Graph.</li>
+<li>Expanding this node reveals all connected nodes.</li>
+</ul>
+<p>See also * <a href="https://demo.grapho.app/docs">https://demo.grapho.app/docs</a></p>
+</section>
+</section>
+<section id="dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>
+<p>Grapho provides useful screens for managing your data whether these are off-the-shelf integrations or custom built for specific use cases from popular frameworks.</p>
+<p>e.g.&nbsp;<a href="https://neo4j.com/labs/neodash/">Neo4j Neodash Dashboard Builder</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/graphsummitsydney2024-neodash.png" class="img-fluid figure-img"></p>
+<figcaption>graphsummitsydney2024-neodash</figcaption>
+</figure>
+</div>
+<p>See our list of <a href="#integrations">Integrations</a> available below and <a href="https://mod.studio/where">contact us</a> for any new integration requirements you might have.</p>
+</section>
+<section id="integrations" class="level2">
+<h2 class="anchored" data-anchor-id="integrations">Integrations</h2>
+<ul>
+<li>Neo4j
+<ul>
+<li>Community Edition - v4.4, v5</li>
+<li>Enterprise Edition - v4.4, v5</li>
+<li>Plugins
+<ul>
+<li>Bloom</li>
+<li>GDS</li>
+<li>APOC</li>
+</ul></li>
+<li>Neodash</li>
+</ul></li>
+<li>Streamlit</li>
+<li>Gradio</li>
+<li>Jupyter</li>
+<li>Django
+<ul>
+<li>Wagtail</li>
+</ul></li>
+</ul>
+<p>Formats</p>
+<ul>
+<li>JSON</li>
+<li>CSV</li>
+<li>VCF</li>
+</ul>
+<p>Platforms</p>
+<ul>
+<li>Neo4j Aura</li>
+<li>Amazon AWS</li>
+<li>Google Cloud</li>
+<li>Microsoft Azure</li>
+<li>ZohoCRM</li>
+<li>Twitter</li>
+<li>Facebook</li>
+<li>Discord</li>
+</ul>
+<p>Graphics Engines</p>
+<ul>
+<li>Unreal Engine</li>
+<li>Houdini</li>
+<li>Touch Designer</li>
+<li>Blender</li>
+</ul>
+</section>
+</section>
+<section id="mixed-reality" class="level1">
+<h1>Mixed Reality</h1>
+<section id="liv" class="level2">
+<h2 class="anchored" data-anchor-id="liv">LIV</h2>
+<p>Grapho XR PCVR supports the LIV Mixed Reality for real-time live action video integration.</p>
+</section>
+</section>
+<section id="use-cases" class="level1">
+<h1>Use Cases</h1>
+<p>Grapho has been deployed for a variety of use cases across major projects in different sectors.</p>
+<ul>
+<li>Organisational knowledge &amp; asset management</li>
+<li>Topological machine learning</li>
+<li>Collection management</li>
+<li>Data activation</li>
+<li>Training &amp; simulation</li>
+<li>Production knowledge management</li>
+<li>Narrative design &amp; worldbuilding</li>
+<li>Public speaking</li>
+</ul>
+<p><img src="img/grapho-point.jpeg" class="img-fluid" alt="pointing"> <em>Screenshot: press TRIGGER to point your virtual hand</em></p>
+<section id="sectors" class="level2">
+<h2 class="anchored" data-anchor-id="sectors">Sectors</h2>
+<ul>
+<li>Enterprise knowledge management</li>
+<li>Cultural heritage</li>
+<li>Media &amp; entertainment</li>
+<li>Video games</li>
+<li>Civil engineering</li>
+</ul>
+</section>
+<section id="case-studies" class="level2">
+<h2 class="anchored" data-anchor-id="case-studies">Case Studies</h2>
+<section id="asia-pacific-network-information-centre-apnic" class="level3">
+<h3 class="anchored" data-anchor-id="asia-pacific-network-information-centre-apnic">Asia-Pacific Network Information Centre (APNIC)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-apnic.jpg" class="img-fluid figure-img"></p>
+<figcaption>APNIC</figcaption>
+</figure>
+</div>
+<p>The APNIC Visualisation Tool was built with Grapho XR to provide internal staff with a resource for network graph exploration and analysis on desktop and in VR.</p>
+</section>
+<section id="parramatta-light-rail" class="level3">
+<h3 class="anchored" data-anchor-id="parramatta-light-rail">Parramatta Light Rail</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-parramatta-lr.jpg" class="img-fluid figure-img"></p>
+<figcaption>Parramatta-Light-Rail</figcaption>
+</figure>
+</div>
+<p>Grapho tools were used to model and illustrate the complex interplay between people, processes and technology for the Software Management Plan.</p>
+</section>
+<section id="japan-broadcasting-corporation-nhk" class="level3">
+<h3 class="anchored" data-anchor-id="japan-broadcasting-corporation-nhk">Japan Broadcasting Corporation (NHK)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-nhk.jpg" class="img-fluid figure-img"></p>
+<figcaption>NHK</figcaption>
+</figure>
+</div>
+<p>Grapho was used to design and prototype a digital human agent that communicated in Japanese sign language on broadcast TV.</p>
+</section>
+<section id="national-film-sound-archive-nfsa" class="level3">
+<h3 class="anchored" data-anchor-id="national-film-sound-archive-nfsa">National Film &amp; Sound Archive (NFSA)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-nfsa.jpg" class="img-fluid figure-img"></p>
+<figcaption>NFSA</figcaption>
+</figure>
+</div>
+<p>Grapho tools are being used to update the service framework for Australia’s national multimedia collection, including a knowledge graph and a topological machine learning pipeline.</p>
+</section>
+<section id="neo4j" class="level3">
+<h3 class="anchored" data-anchor-id="neo4j">Neo4j</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-neo4j.jpg" class="img-fluid figure-img"></p>
+<figcaption>Neo4j</figcaption>
+</figure>
+</div>
+<p>Neo4j field engineers and marketing managers use Grapho XR to help visitors to their trade show stand get a handle (literally!) on graph databases.</p>
+</section>
+<section id="a-clever-label" class="level3">
+<h3 class="anchored" data-anchor-id="a-clever-label">A Clever Label</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-acl.jpg" class="img-fluid figure-img"></p>
+<figcaption>ACL</figcaption>
+</figure>
+</div>
+<p>Grapho XR’s first iteration was as the core mechanic behind Mod’s VR investigative documentary, <a href="https://acleverlabel.com">A Clever Label</a>, available on Steam.</p>
+</section>
+<section id="mod" class="level3">
+<h3 class="anchored" data-anchor-id="mod">Mod</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/projects/grapho-docs-case-studies-headbin.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mod</figcaption>
+</figure>
+</div>
+<p>Property graphs form a core component of Mod’s studio management and production pipeline - tracking physical and digital IP as well as managing storyworlds and productions.</p>
+</section>
+</section>
+</section>
+<section id="troubleshooting" class="level1">
+<h1>Troubleshooting</h1>
+<p>We’re here to help.</p>
+<p>For general issues with Grapho or this documentation, use <a href="https://github.com/modprods/grapho-user-guide/issues">https://github.com/modprods/grapho-user-guide/issues</a> or contact your Grapho account manager.</p>
+</section>
+<section id="support" class="level1">
+<h1>Support</h1>
+<p>Email - support (AT) grapho (DOT) app</p>
+<p>Discord - post in channel #grapho on <a href="https://discord.gg/PPCaQD2">Mod’s Discord server</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
